@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isah David — Product Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFFFFF;
+            --secondary: #B8B0C8;
+            --accent: #9B7BFF;
+            --background: #1A0B2E;
+            --surface: #2A1B3E;
+            --border: #3D2E52;
+            --purple-dark: #1A0B2E;
+            --purple-mid: #2A1B3E;
+            --purple-light: #9B7BFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #1A0B2E 0%, #23103D 50%, #1A0B2E 100%);
+            color: var(--primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 11, 46, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 20px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #1A0B2E 0%, #2D1B4E 50%, #1A0B2E 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(155, 123, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(155, 123, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Hero two-column wrapper */
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Left: Text --- */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-hello {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--secondary);
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 9vw, 80px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .hero-role {
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--secondary);
+            letter-spacing: -0.3px;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            color: var(--secondary);
+            line-height: 1.65;
+            max-width: 460px;
+            opacity: 0.85;
+        }
+
+        .hero-quote {
+            font-size: 15px;
+            font-style: italic;
+            color: var(--accent);
+            padding-left: 16px;
+            border-left: 3px solid var(--accent);
+            opacity: 0.9;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        /* --- Right: Image --- */
+        .hero-image-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-image-wrap {
+            position: relative;
+            width: 340px;
+            height: 340px;
+        }
+
+        /* soft glow ring */
+        .hero-image-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(155, 123, 255, 0.35) 0%, transparent 70%);
+            animation: heroPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes heroPulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50%       { opacity: 1;   transform: scale(1.05); }
+        }
+
+        .hero-image-wrap img {
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center center;
+            border: 3px solid rgba(155, 123, 255, 0.4);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Available badge */
+        .hero-badge {
+            position: absolute;
+            bottom: 16px;
+            right: -16px;
+            background: linear-gradient(135deg, #9B7BFF 0%, #7B5FDD 100%);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 999px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 20px rgba(155, 123, 255, 0.45);
+            z-index: 2;
+            animation: badgeBounce 2.5s ease-in-out infinite;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #aeffa0;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 6px #aeffa0;
+        }
+
+        @keyframes badgeBounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-5px); }
+        }
+
+        /* Responsive hero */
+        @media (max-width: 768px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+            .hero-image-col { order: -1; }
+            .hero-image-wrap,
+            .hero-image-wrap img { width: 240px; height: 240px; }
+            .hero-badge { right: 0; bottom: 8px; font-size: 11px; }
+            .hero-desc { max-width: 100%; }
+            .hero-quote { text-align: left; }
+            .cta-group { justify-content: center; }
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #9B7BFF 0%, #7B5FDD 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(155, 123, 255, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--primary);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--surface);
+            border-color: var(--accent);
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #1A0B2E 0%, #23103D 100%);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* Tools Panel (replaces about image) */
+        .tools-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .tools-heading {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .tool-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(145deg, #2A1B3E 0%, #1F1032 100%);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 20px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            cursor: default;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 28px rgba(155, 123, 255, 0.18);
+        }
+
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: rgba(155, 123, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .tool-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .tool-type {
+            font-size: 11px;
+            color: var(--secondary);
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--secondary);
+        }
+
+        .about-text p {
+            margin-bottom: 24px;
+        }
+
+        .about-text strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #23103D 0%, #1A0B2E 50%, #23103D 100%);
+            position: relative;
+        }
+
+        .skills::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            padding: 32px;
+            background: linear-gradient(145deg, #2A1B3E 0%, #1F1032 100%);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(155, 123, 255, 0.15);
+            border-color: var(--accent);
+        }
+
+        .skill-card:hover::before {
+            opacity: 1;
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3D2E52 0%, #2A1B3E 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .skill-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .skill-card p {
+            font-size: 15px;
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 120px 0;
+            background: linear-gradient(180deg, #1A0B2E 0%, #23103D 50%, #1A0B2E 100%);
+            position: relative;
+        }
+
+        .projects::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            margin-top: 48px;
+        }
+
+        .featured-project {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 64px;
+            align-items: flex-start;
+        }
+
+        .featured-project:nth-child(even) {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .featured-project:nth-child(even) .project-image {
+            order: 2;
+        }
+
+        .project-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .project-image:hover {
+            transform: scale(1.02);
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='0.5'/%3E%3C/svg%3E");
+            background-size: 20px 20px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .project-image {
+                aspect-ratio: 16/9;
+                border-radius: 16px;
+            }
+        }
+
+        .project-hr {
+            background-image: url(img/hrscreen.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-himclothiers {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .project-goalio {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        }
+
+        .project-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
+
+        .project-description {
+            font-size: 16px;
+            color: var(--secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .case-study-section {
+            margin-bottom: 24px;
+        }
+
+        .case-study-section h4 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .case-study-section p {
+            font-size: 15px;
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .project-cta {
+            margin-top: 32px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #23103D 0%, #1A0B2E 100%);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .contact h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 0;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
+
+        .contact-content > p {
+            font-size: 18px;
+            color: var(--secondary);
+            margin-bottom: 0;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-note {
+            margin-top: 32px;
+            font-size: 15px;
+            color: var(--secondary);
+        }
+
+        .contact-note a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+
+        .contact-note a:hover {
+            border-color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            background: linear-gradient(180deg, #1A0B2E 0%, #0F0518 100%);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 14px;
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        /* ── Hamburger button ── */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Mobile nav drawer */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: rgba(26, 11, 46, 0.98);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border);
+            position: fixed;
+            top: 65px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            padding: 16px 24px 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            transition: color 0.2s, padding-left 0.2s;
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { 
+            color: var(--primary);
+            padding-left: 8px;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Nav */
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+
+            /* Hero */
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .hero-image-col { order: -1; }
+            .hero-image-wrap,
+            .hero-image-wrap img { width: 220px; height: 220px; }
+            .hero-badge { right: 0; bottom: 8px; font-size: 11px; }
+            .hero h1 { font-size: clamp(40px, 12vw, 56px); letter-spacing: -2px; }
+            .hero-desc { max-width: 100%; }
+            .hero-quote { text-align: left; }
+            .cta-group { justify-content: center; }
+
+            /* About */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .tools-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .about-text { font-size: 16px; }
+
+            /* Skills */
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Projects */
+            .featured-project,
+            .featured-project:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .featured-project:nth-child(even) .project-image {
+                order: 0;
+            }
+            .projects-grid { gap: 64px; }
+            .project-content h3 { font-size: 24px; }
+
+            /* Contact */
+            .contact h2 { font-size: 32px; }
+            .contact-options { width: 100%; }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Footer */
+            .footer-content {
+                flex-direction: column;
+                gap: 24px;
+                text-align: center;
+            }
+            .social-links { 
+                justify-content: center; 
+                gap: 20px 24px; 
+            }
+
+            /* Section padding */
+            .about,
+            .skills,
+            .projects,
+            .contact { padding: 80px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .tools-grid { grid-template-columns: 1fr; }
+            .hero-image-wrap,
+            .hero-image-wrap img { width: 180px; height: 180px; }
+            .contact h2 { font-size: 28px; }
+            .section-header h2 { font-size: 28px; }
+            .section-label { font-size: 12px; }
+            .skill-card { padding: 24px; }
+            .hero-badge { font-size: 10px; padding: 6px 12px; }
+            .social-links { gap: 12px 20px; }
+        }
+        /* Resume Modal */
+        .resume-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 4, 20, 0.92);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .resume-modal-overlay.open {
+            display: flex;
+        }
+        .resume-modal {
+            background: #1F1032;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 680px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+            animation: modalIn 0.25s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.95) translateY(12px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .resume-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .resume-modal-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .resume-modal-title svg { color: var(--accent); }
+        .resume-modal-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .resume-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #9B7BFF 0%, #7B5FDD 100%);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: box-shadow 0.2s;
+        }
+        .resume-download:hover {
+            box-shadow: 0 4px 16px rgba(155,123,255,0.4);
+        }
+        .resume-close {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+        .resume-close:hover {
+            background: var(--surface);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+        .resume-modal-body {
+            flex: 1;
+            overflow: auto;
+            padding: 0;
+        }
+        .resume-modal-body iframe {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            display: block;
+        }
+
+        /* Resume button style */
+        .btn-resume {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--secondary);
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            border: 1px dashed var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn-resume:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(155, 123, 255, 0.06);
+        }
+
+        @media (max-width: 768px) {
+            .btn-resume { width: 100%; justify-content: center; }
+            .resume-modal { 
+                max-width: 95%; 
+                max-height: 85vh;
+                border-radius: 16px; 
+            }
+            .resume-modal-body iframe { height: 60vh; }
+            .resume-modal-header { padding: 16px; }
+            .resume-modal-title { font-size: 14px; }
+            .resume-download { padding: 6px 12px; font-size: 12px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Isah David.</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu" onclick="document.getElementById('mobileMenu').classList.toggle('open'); this.classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+        <a href="#work" onclick="document.getElementById('mobileMenu').classList.remove('open')">Work</a>
+        <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+
+                <!-- Left: Text -->
+                <div class="hero-content">
+                    <span class="hero-hello">Hello! I am</span>
+                    <h1>Isah David</h1>
+                    <span class="hero-role">UI/UX Designer</span>
+                    <p class="hero-desc">I design digital products that feel simple, intuitive, and actually make sense.</p>
+                    <p class="hero-quote">I don't just make it look good—I make it work.</p>
+                    <div class="cta-group">
+                        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I%20'm%20interested%20in%20working%20with%20you" class="btn-primary" target="_blank">
+                            Get In Touch
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                        <a href="https://www.behance.net/isaholea" class="btn-secondary" target="_blank">
+                            View My Work
+                        </a>
+                        <button class="btn-resume" onclick="openResume()">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            View Resume
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="hero-image-col">
+                    <div class="hero-image-wrap">
+                        <img src="img/portfolioi.jpg" alt="Isah David — UI/UX Designer">
+                        <div class="hero-badge">Available for work</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">About Me</div>
+            </div>
+            <div class="about-content">
+                <!-- Left: Tools I Use -->
+                <div class="tools-panel">
+                    <div class="tools-heading">Tools I Use</div>
+                    <div class="tools-grid">
+
+                        <!-- Figma -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE"/>
+                                    <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83"/>
+                                    <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262"/>
+                                    <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#FF3A59"/>
+                                    <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="tool-name">Figma</div>
+                                <div class="tool-type">UI Design</div>
+                            </div>
+                        </div>
+
+                        <!-- Adobe XD -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="8" fill="#470137"/>
+                                    <path d="M14.6 22.4L13.1 25.7C13 25.9 12.8 26 12.6 26H10.3C10 26 9.9 25.8 10 25.6L15.8 13C15.9 12.8 16 12.7 16.1 12.7H18.6C18.8 12.7 18.9 12.8 19 13L24.9 25.6C25 25.8 24.9 26 24.6 26H22.1C21.9 26 21.7 25.9 21.6 25.7L20.1 22.4H14.6ZM17.4 16.2L15.4 20.4H19.3L17.4 16.2Z" fill="#FF61F6"/>
+                                    <path d="M25 13.8C25 13.6 25.1 13.5 25.3 13.5H27.6C27.8 13.5 27.9 13.6 27.9 13.8V25.7C27.9 25.9 27.8 26 27.6 26H25.3C25.1 26 25 25.9 25 25.7V13.8Z" fill="#FF61F6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="tool-name">Adobe XD</div>
+                                <div class="tool-type">Prototyping</div>
+                            </div>
+                        </div>
+
+                        <!-- Photoshop -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="8" fill="#001D34"/>
+                                    <path d="M10 10H15.5C17.2 10 18.6 10.5 19.6 11.5C20.6 12.5 21.1 13.8 21.1 15.4C21.1 17 20.6 18.3 19.5 19.3C18.5 20.3 17 20.8 15.2 20.8H12.3V26H10V10ZM12.3 12.1V18.7H15C16.2 18.7 17.1 18.4 17.7 17.8C18.3 17.2 18.7 16.4 18.7 15.4C18.7 14.4 18.4 13.6 17.7 13C17 12.4 16.1 12.1 15 12.1H12.3Z" fill="#31A8FF"/>
+                                    <path d="M22 22.2C22 21.2 22.3 20.3 22.8 19.6C23.3 18.9 24.1 18.4 25.1 18.1L26.7 17.7V16.9C26.7 16.4 26.6 16 26.3 15.7C26 15.4 25.6 15.3 25.1 15.3C24.6 15.3 24.2 15.4 23.9 15.7C23.7 15.9 23.5 16.2 23.4 16.6H21.3C21.4 15.6 21.8 14.8 22.5 14.2C23.2 13.6 24.1 13.3 25.2 13.3C26.3 13.3 27.2 13.6 27.9 14.2C28.6 14.8 28.9 15.7 28.9 16.8V22.5C28.9 23 29 23.5 29.1 24H27C26.9 23.6 26.9 23.1 26.8 22.6C26.5 23.1 26.1 23.5 25.6 23.8C25.1 24.1 24.5 24.2 23.9 24.2C23.1 24.2 22.5 23.9 22 23.4C21.6 22.9 22 22.4 22 22.2ZM25.5 22.3C26 22 26.4 21.6 26.7 21.1V19.3L25.3 19.7C24.8 19.9 24.4 20.1 24.1 20.4C23.8 20.7 23.7 21.1 23.7 21.5C23.7 21.9 23.8 22.2 24 22.4C24.2 22.6 24.5 22.7 24.9 22.7C25.1 22.7 25.3 22.6 25.5 22.3Z" fill="#31A8FF"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="tool-name">Photoshop</div>
+                                <div class="tool-type">Image Editing</div>
+                            </div>
+                        </div>
+
+                        <!-- Illustrator -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="36" rx="8" fill="#1A0A00"/>
+                                    <path d="M14.9 22.5L13.3 26H11L16.9 12H19.2L25.1 26H22.7L21.1 22.5H14.9ZM20.3 20.7L18 14.8L15.7 20.7H20.3Z" fill="#FF9A00"/>
+                                    <path d="M26.5 12.5C26.5 13.3 25.9 13.9 25.1 13.9C24.3 13.9 23.7 13.3 23.7 12.5C23.7 11.7 24.3 11.1 25.1 11.1C25.9 11.1 26.5 11.7 26.5 12.5ZM24 16H26.2V26H24V16Z" fill="#FF9A00"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="tool-name">Illustrator</div>
+                                <div class="tool-type">Vector Design</div>
+                            </div>
+                        </div>
+
+                        <!-- VS Code -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.3 4.4L22.6 1.2C22 0.9 21.3 1 20.8 1.4L1.4 18.4C0.9 18.9 0.9 19.7 1.4 20.2L3.8 22.4C4.3 22.9 5.1 22.9 5.7 22.5L27.3 7.7C28.2 7.1 29.5 7.7 29.5 8.8V8.6C29.5 6.8 28.6 5.1 29.3 4.4Z" fill="#0065A9"/>
+                                    <path d="M29.3 27.6L22.6 30.8C22 31.1 21.3 31 20.8 30.6L1.4 13.6C0.9 13.1 0.9 12.3 1.4 11.8L3.8 9.6C4.3 9.1 5.1 9.1 5.7 9.5L27.3 24.3C28.2 24.9 29.5 24.3 29.5 23.2V23.4C29.5 25.2 28.6 26.9 29.3 27.6Z" fill="#007ACC"/>
+                                    <path d="M22.6 30.8C22 31.1 21.3 31 20.8 30.6C21.4 31.1 22.4 30.7 22.4 29.9V2.1C22.4 1.3 21.4 0.9 20.8 1.4C21.3 1 22 0.9 22.6 1.2C23.7 1.7 24.4 2.8 24.4 4V28C24.4 29.2 23.7 30.3 22.6 30.8Z" fill="#1F9CF0"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="tool-name">VS Code</div>
+                                <div class="tool-type">Code Editor</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: About Text (unchanged) -->
+                <div class="about-text">
+                    <p>I'm <strong>Isah David</strong>, a product designer who sits at the intersection of business goals and user needs. Five years in, I've learned that great design isn't just about making things look good—it's about removing friction, clarifying complexity, and creating moments of delight that keep users coming back.</p>
+
+                    <p>I specialize in taking messy, undefined problems and shaping them into focused, testable solutions. Whether it's building a design system from scratch or redesigning a legacy product, I bring the same energy: deep research, rapid iteration, and obsessive attention to the details that matter.</p>
+
+                    <p>Currently based in Nigeria, working with clients globally. When I'm not pushing pixels, you'll find me catching up on football—yes, I'm a Manchester United fan through and through.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What I Do</div>
+                <h2>Skills & Services</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting interfaces that balance aesthetic appeal with functional clarity. From landing pages to complex dashboards, every pixel serves a purpose.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Product Design</h3>
+                    <p>End-to-end product thinking—from discovery and strategy through to launch and iteration. I design the full experience, not just the screens.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Wireframing & Prototyping</h3>
+                    <p>Rapid validation through low-fi sketches to high-fidelity interactive prototypes. Test early, fail fast, ship confidently.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>User Research</h3>
+                    <p>Data-informed design decisions through interviews, usability testing, and analytics. I let user behavior guide the strategy.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🧩</div>
+                    <h3>Design Systems</h3>
+                    <p>Building scalable component libraries that keep teams aligned and products consistent. Design at scale without losing soul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="work">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Selected Work</div>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: HR Dashboard -->
+                <div id="testing" class="featured-project">
+                    <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1" target="_blank" class="project-image project-hr">
+                      
+                    </a>
+
+                    <div class="project-content">
+                        <h3>HR Management Dashboard</h3>
+                        <p class="project-description">A complete redesign of workforce management for a growing tech company. Turning HR chaos into clarity through thoughtful information architecture and human-centered design.</p>
+
+                        <div class="case-study-section">
+                            <h4>The Problem</h4>
+                            <p>HR teams were drowning in fragmented tools—spreadsheets, emails, and legacy software that didn't talk to each other. Employee data was scattered, onboarding took weeks, and managers lacked visibility into team performance. The existing system was costing time, money, and talent.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Process</h4>
+                            <p>Started with stakeholder interviews across HR, management, and employees to map pain points. Built user personas and journey maps, then moved into rapid wireframing and iterative prototyping. Weekly testing sessions with actual users kept us honest and on track.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Solution</h4>
+                            <p>Designed a unified dashboard that centralizes employee data, automates onboarding workflows, and gives managers real-time insights. Clean, modular interface with role-based views—HR sees everything, managers see their teams, employees see their growth.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Result</h4>
+                            <p>Reduced onboarding time by 60%, cut HR admin work by 40%, and improved employee satisfaction scores. The design system I built is now being rolled out across the company's entire product suite.</p>
+                        </div>
+
+                        <div class="project-cta">
+                            <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1" class="btn-primary" target="_blank">
+                                View in Figma
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: HimClothiers -->
+                <div class="featured-project">
+                    <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=0-1&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="project-image project-himclothiers">
+                        <span>HimClothiers E-Commerce</span>
+                    </a>
+
+                    <div class="project-content">
+                        <h3>HimClothiers — Premium Menswear E-Commerce</h3>
+                        <p class="project-description">A luxury fashion e-commerce experience designed for the modern Nigerian man. Blending contemporary aesthetics with seamless shopping flows to elevate a local brand to international standards.</p>
+
+                        <div class="case-study-section">
+                            <h4>The Problem</h4>
+                            <p>HimClothiers had exceptional products but a digital presence that didn't match their quality. The existing site suffered from high bounce rates (68%), abandoned carts (74%), and a checkout process that frustrated mobile users. Customers couldn't visualize fit, fabric quality, or styling options—critical barriers in online fashion retail.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Process</h4>
+                            <p>Conducted competitive analysis of luxury fashion retailers (Mr Porter, SSENSE) and local Nigerian e-commerce patterns. Interviewed 20+ target customers to understand shopping behaviors. Mapped the entire purchase journey from discovery to unboxing, identifying friction points at size selection, payment trust, and delivery expectations.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Solution</h4>
+                            <p>Designed a mobile-first experience with immersive product photography, detailed size guides with body-type recommendations, and a streamlined 3-step checkout. Added a "Style Guide" feature showing complete looks, AR fabric texture preview, and multiple payment options including local methods (Paystack, bank transfer) alongside international cards.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Result</h4>
+                            <p>Bounce rate dropped to 34%, cart abandonment reduced to 41%, and mobile conversion increased by 156% within three months. Average order value grew 28% through the style guide upsells. The brand successfully launched international shipping to the UK and US based on the new platform's credibility.</p>
+                        </div>
+
+                        <div class="project-cta">
+                            <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=0-1&t=HGjmpHZXDVJ1n2Sh-1" class="btn-primary" target="_blank">
+                                View in Figma
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: GOALIO -->
+                <div class="featured-project">
+                    <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=2-2049&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="project-image project-goalio">
+                        <span>GOALIO Livescore App</span>
+                    </a>
+
+                    <div class="project-content">
+                        <h3>GOALIO — Football Livescore & Stats App</h3>
+                        <p class="project-description">A real-time football livescore application designed for passionate fans who demand instant updates, deep statistics, and personalized match tracking. Bringing the stadium experience to the palm of your hand.</p>
+
+                        <div class="case-study-section">
+                            <h4>The Problem</h4>
+                            <p>Football fans were frustrated with existing livescore apps that were either too cluttered with ads, too slow with updates, or missing crucial features like detailed player stats and push notifications for specific events (goals, red cards, substitutions). Most apps treated all users the same, ignoring the fact that a Manchester United fan in Lagos has different needs than a casual viewer.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Process</h4>
+                            <p>Shadowed 15 football fans during match days to understand their behaviors—when they check scores, what triggers notifications, how they share moments with friends. Analyzed top competitors (FlashScore, SofaScore, FotMob) to identify gaps in the Nigerian market. Conducted card sorting exercises to organize 50+ data points per match into intuitive hierarchies.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Solution</h4>
+                            <p>Built a lightning-fast mobile experience with sub-second score updates, customizable notification triggers, and a "Match Pulse" feature showing momentum shifts through visual heatmaps. Designed a team-centric home screen that surfaces your club's news first, plus a social layer for celebrating goals with friends via quick-share graphics and reaction emojis.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Result</h4>
+                            <p>Beta testing with 500 users showed 89% daily active retention during Premier League weekends. Average session time hit 12 minutes—3x industry standard. Push notification open rates reached 67% (vs. 15% average) due to hyper-relevant timing. Currently in closed beta with 2,000+ waitlist signups ahead of public launch.</p>
+                        </div>
+
+                        <div class="project-cta">
+                            <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=2-2049&t=HGjmpHZXDVJ1n2Sh-1" class="btn-primary" target="_blank">
+                                View in Figma
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-label">Get in Touch</div>
+                <h2>Let's build something great together.</h2>
+                <p>Have a project in mind? I'm currently accepting new clients for Q2 2026. Whether you need a full product design, a design system, or just want to explore an idea—I'd love to hear about it.</p>
+
+                <div class="contact-options">
+                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I%20'm%20interested%20in%20working%20with%20you" class="btn-primary" target="_blank">
+                        Chat with me on WhatsApp
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                </div>
+
+                <p class="contact-note">
+                    Want to see more? Explore additional work on <a href="https://www.behance.net/isaholea" target="_blank">Behance →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    © 2026 Isah David. All rights reserved.
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I%20'm%20interested%20in%20working%20with%20you" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="https://www.behance.net/isaholea" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.803 5.731c.589 0 1.119.051 1.605.155.483.103.895.273 1.243.508.343.235.611.547.803.939.187.387.28.871.28 1.443 0 .62-.14 1.137-.421 1.551-.283.415-.7.753-1.255 1.015.757.219 1.318.602 1.69 1.146.374.549.557 1.205.557 1.976 0 .625-.119 1.166-.358 1.622-.238.457-.561.832-.967 1.132-.406.295-.87.514-1.388.653-.52.141-1.051.21-1.595.21H2V5.731h5.803zm-.351 4.972c.48 0 .878-.114 1.192-.345.312-.228.463-.604.463-1.119 0-.286-.051-.522-.151-.707-.102-.184-.24-.329-.423-.432-.182-.103-.395-.173-.639-.214-.246-.037-.506-.058-.78-.058H4.71v2.875h2.742zm.151 5.239c.267 0 .521-.023.76-.077.241-.052.455-.136.637-.261.182-.12.332-.283.44-.491.109-.206.162-.475.162-.798 0-.634-.18-1.085-.539-1.358-.359-.27-.83-.404-1.42-.404H4.71v3.389h2.893zm8.565-.142c.367.358.896.538 1.584.538.493 0 .919-.125 1.278-.373.354-.249.57-.515.646-.798h2.14c-.34 1.072-.853 1.835-1.539 2.29-.687.452-1.514.679-2.484.679-.677 0-1.29-.118-1.839-.354-.548-.236-.997-.571-1.348-1.008-.348-.436-.619-.959-.809-1.569-.188-.609-.284-1.283-.284-2.021 0-.703.098-1.362.293-1.976.195-.614.475-1.148.838-1.605.368-.458.811-.815 1.332-1.073.521-.257 1.107-.387 1.759-.387.719 0 1.346.146 1.882.439.535.291.974.686 1.316 1.185.342.498.588 1.075.737 1.731.149.655.204 1.347.162 2.077h-6.151c.001.71.125 1.329.491 1.683zm2.672-4.903c-.291-.321-.793-.481-1.387-.481-.391 0-.714.068-.971.206-.256.137-.461.306-.615.508-.152.201-.261.418-.324.652-.065.229-.107.441-.127.629h4.109c-.095-.64-.393-1.193-.685-1.514zm-2.731-3.09h4.642v1.184h-4.642V8.44z"/></svg>
+                        Behance
+                    </a>
+                    <a href="https://x.com/IsahOlea" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        X (Twitter)
+                    </a>
+                    <a href="https://www.instagram.com/isahdavid6?igsh=MTltb3o2MTQ2ZmY2NQ==" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal-overlay" id="resumeModal" onclick="handleOverlayClick(event)">
+        <div class="resume-modal">
+            <div class="resume-modal-header">
+                <div class="resume-modal-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Isah David — Resume
+                </div>
+                <div class="resume-modal-actions">
+                    <a href="img/resume.pdf" download="Isah_David_Resume.pdf" class="resume-download">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <button class="resume-close" onclick="closeResume()" aria-label="Close resume">&times;</button>
+                </div>
+            </div>
+            <div class="resume-modal-body">
+                <iframe src="img/resume.pdf" title="Isah David Resume"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openResume() {
+            document.getElementById('resumeModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeResume() {
+            document.getElementById('resumeModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function handleOverlayClick(e) {
+            if (e.target === document.getElementById('resumeModal')) closeResume();
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResume(); });
+    </script>
+
+</body>
+</html>
