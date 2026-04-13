@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Isah David — Product Designer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #FFFFFF;
@@ -35,13 +35,542 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
+            * { 
+                max-width: 100%; 
+                overflow-x: hidden; 
+                box-sizing: border-box;
             }
+            html, body {
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .container { 
+                padding: 0 20px; 
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            
+            /* Navigation */
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            nav { 
+                padding: 14px 0; 
+                width: 100%;
+                max-width: 100vw;
+            }
+            .logo { font-size: 16px; }
+            
+            /* Hero - Full width, centered, no overflow */
+            .hero { 
+                padding: 90px 20px 50px; 
+                min-height: auto; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+                box-sizing: border-box;
+            }
+            .hero-inner {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 32px 0 !important;
+                text-align: center;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .hero-content {
+                order: 2;
+                gap: 16px;
+                width: 100% !important;
+                max-width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            .hero-image-col {
+                order: 1;
+                justify-content: center !important;
+                width: 90% !important;
+                max-width: 100% !important;
+                max-height: 300px !important;
+                display: flex;
+                margin: 0 auto;
+            }
+            .hero-image-wrap, .hero-image-wrap img {
+                width: 180px;
+                height: 180px;
+            }
+            .hero h1 { 
+                font-size: clamp(24px, 8vw, 30px) !important;
+                text-align: center;
+                width: 100%;
+                line-height: 1.2;
+            }
+            .hero-desc {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            /* About */
+            .about { 
+                padding: 60px 20px; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .about-content {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 24px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .tools-panel { 
+                width: 100% !important; 
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-text {
+                font-size: 14px;
+                line-height: 1.7;
+                color: var(--secondary);
+                order: 2;
+                display: block;
+                visibility: visible;
+                opacity: 1;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            .section-header { 
+                margin-bottom: 32px; 
+                text-align: center !important;
+                width: 100%;
+            }
+            .section-label { 
+                font-size: 11px; 
+                margin-bottom: 12px; 
+                text-align: center !important;
+                display: block;
+                width: 100%;
+            }
+            
+            /* Tools grid - horizontal scroll with centered cards */
+            .tools-category { 
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tools-category .tools-grid {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                gap: 10px;
+                padding: 10px 5px;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                justify-content: flex-start;
+            }
+            .tools-category .tools-grid::-webkit-scrollbar { display: none; }
+            .tools-category .tool-card {
+                flex-shrink: 0;
+                min-width: 120px;
+                padding: 12px 14px;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+            .tool-icon { width: 28px; height: 28px; }
+            .tool-icon svg { width: 16px; height: 16px; }
+            .tool-name { font-size: 12px; }
+            .tool-type { font-size: 10px; }
+            
+            /* Hero styles */
+            .hero-hello { font-size: 13px; text-align: center; }
+            .hero h1 { 
+                font-size: clamp(28px, 10vw, 36px);
+                line-height: 1.2;
+                text-align: center;
+                width: 100%;
+            }
+            .hero-desc {
+                font-size: 14px;
+                line-height: 1.6;
+                text-align: center;
+                max-width: 100%;
+            }
+            .cta-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                align-items: center;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 14px;
+            }
+
+            /* Skills - Centered, contained */
+            .skills { 
+                padding: 60px 20px; 
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .section-title {
+                font-size: 26px;
+                margin-bottom: 28px;
+                text-align: center;
+                width: 100%;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                width: 100%;
+                max-width: 100%;
+            }
+            .skill-card {
+                padding: 22px 20px;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .skill-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            .skill-card h3 {
+                font-size: 17px;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+            .skill-card p {
+                font-size: 13px;
+                line-height: 1.6;
+                text-align: center;
+            }
+
+            /* Projects */
+            .projects { 
+                padding: 60px 20px; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .projects-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 32px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .featured-project {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 0 auto !important;
+                box-sizing: border-box;
+            }
+            .featured-project:nth-child(even) .project-image { order: 0; }
+            .project-image {
+                aspect-ratio: 16/9;
+                border-radius: 14px;
+                font-size: 16px;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .project-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                padding: 0 15px;
+                box-sizing: border-box;
+            }
+            .project-content h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                text-align: center;
+            }
+            .project-description {
+                font-size: 14px;
+                margin-bottom: 20px;
+                text-align: center;
+                width: 100% !important;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            .tech-stack {
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+                justify-content: center !important;
+                width: 100%;
+            }
+            .tech-badge {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+            .case-study-section { 
+                margin-bottom: 16px; 
+                text-align: left;
+                width: 100%;
+            }
+            .case-study-section h4 {
+                font-size: 15px;
+                margin-bottom: 8px;
+                text-align: left;
+            }
+            .case-study-section p {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+            .project-cta { 
+                text-align: center; 
+                width: 100%;
+            }
+            .project-cta .btn-primary {
+                width: auto;
+                padding: 12px 20px;
+                font-size: 13px;
+            }
+
+            /* Contact */
+            .contact { 
+                padding: 60px 20px; 
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .contact-content { 
+                padding: 0; 
+                width: 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            .contact h2 {
+                font-size: 26px;
+                line-height: 1.3;
+                text-align: center;
+                width: 100%;
+            }
+            .contact p {
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 24px;
+                text-align: center;
+            }
+            .contact-options {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                width: 100%;
+            }
+            .contact-note {
+                font-size: 12px;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            /* Footer */
+            .footer { 
+                padding: 32px 20px; 
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                width: 100%;
+            }
+            .social-links {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+            .footer p { font-size: 13px; }
+        }
+
+        /* Larger tablet */
+        @media (min-width: 481px) and (max-width: 768px) {
+            * { 
+                max-width: 100%; 
+                overflow-x: hidden; 
+                box-sizing: border-box;
+            }
+            html, body {
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .container { 
+                padding: 0 24px; 
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            
+            /* Hero */
+            .hero-inner {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 32px 0 !important;
+                text-align: center;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .hero-content {
+                order: 2;
+                gap: 16px;
+                width: 100% !important;
+                max-width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            .hero-image-col {
+                order: 1;
+                justify-content: center !important;
+                width: 90% !important;
+                max-width: 100% !important;
+                max-height: 300px !important;
+                display: flex;
+                margin: 0 auto;
+            }
+            .hero-image-wrap, .hero-image-wrap img {
+                width: 180px;
+                height: 180px;
+            }
+            .hero h1 { 
+                font-size: clamp(24px, 8vw, 30px) !important;
+                text-align: center;
+                width: 100%;
+                line-height: 1.2;
+            }
+            .hero-desc {
+                text-align: center;
+                max-width: 100%;
+            }
+            .hero-content {
+                text-align: center;
+                width: 100%;
+            }
+            
+            /* About */
+            .about { 
+                padding: 80px 24px; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .about-content { 
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 24px; 
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            
+            /* Skills */
+            .skills { 
+                padding: 80px 24px; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .skills-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            /* Projects */
+            .projects { 
+                padding: 80px 24px; 
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            .projects-grid { 
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 32px !important; 
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            .featured-project {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 0 auto !important;
+            }
+            .project-image {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .project-content {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .project-content h3 {
+                text-align: center;
+            }
+            .project-description {
+                text-align: center;
+                padding: 0 10px;
+            }
+            .tech-stack {
+                justify-content: center !important;
+            }
+            .case-study-section {
+                text-align: left;
+            }
+            
+            .contact { 
+                padding: 80px 24px; 
+                width: 100%;
+            }
+            .contact h2 { font-size: 30px; }
         }
 
         /* Navigation */
@@ -125,8 +654,8 @@
         /* Hero two-column wrapper */
         .hero-inner {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 80px;
             align-items: center;
             width: 100%;
             position: relative;
@@ -138,6 +667,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            min-width: 0;
         }
 
         .hero-hello {
@@ -156,11 +686,41 @@
             margin: 0;
         }
 
-        .hero-role {
-            font-size: 22px;
+        .hero-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0;
+        }
+
+        .static-text {
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .typing-wrapper {
+            display: inline-flex;
+            align-items: baseline;
+            min-width: 320px;
+            height: 1.2em;
+        }
+
+        .typing-text {
             font-weight: 500;
-            color: var(--secondary);
-            letter-spacing: -0.3px;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+            white-space: nowrap;
+        }
+
+        .typing-cursor {
+            color: #9B7BFF;
+            font-weight: 400;
+            animation: cursorBlink 1s step-end infinite;
+        }
+
+        @keyframes cursorBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
         .hero-desc {
@@ -193,6 +753,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            flex-shrink: 0;
         }
 
         .hero-image-wrap {
@@ -263,20 +824,72 @@
             50%       { transform: translateY(-5px); }
         }
 
-        /* Responsive hero */
+        /* Responsive - Tablet 768px */
         @media (max-width: 768px) {
+            /* Navigation */
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            
+            /* Hero */
             .hero-inner {
                 grid-template-columns: 1fr;
-                gap: 48px;
+                gap: 40px;
                 text-align: center;
             }
-            .hero-image-col { order: -1; }
-            .hero-image-wrap,
-            .hero-image-wrap img { width: 240px; height: 240px; }
-            .hero-badge { right: 0; bottom: 8px; font-size: 11px; }
+            .hero-content {
+                order: 2;
+                align-items: center;
+            }
+            .hero-image-col {
+                order: 1;
+                justify-content: center;
+            }
+            .hero-image-wrap, .hero-image-wrap img { 
+                width: 260px; 
+                height: 260px; 
+            }
+            .hero-badge { 
+                right: 20px; 
+                bottom: 12px; 
+            }
+            .hero h1 { font-size: clamp(28px, 7vw, 36px) !important; }
+            .hero-title {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             .hero-desc { max-width: 100%; }
-            .hero-quote { text-align: left; }
-            .cta-group { justify-content: center; }
+            .cta-group { 
+                justify-content: center; 
+                flex-wrap: wrap;
+            }
+
+            /* About */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .tools-panel { width: 100%; }
+            .about-text { font-size: 16px; }
+
+            /* Skills */
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .skill-card { padding: 28px 22px; }
+            .section-title { font-size: 32px; }
+
+            /* Projects */
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .featured-project { grid-template-columns: 1fr; }
+            .featured-project:nth-child(even) .project-image { order: 0; }
+            
+            /* Contact */
+            .contact-content { padding: 0 20px; }
+            .contact h2 { font-size: 30px; }
         }
 
         .btn-primary {
@@ -343,10 +956,25 @@
         .section-label {
             font-size: 14px;
             font-weight: 600;
-            color: var(--accent);
+            color: #9B7BFF;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
 
         .about-content {
@@ -360,8 +988,38 @@
         .tools-panel {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
             align-items: flex-start;
+        }
+
+        .tools-category {
+            width: 100%;
+        }
+
+        .tools-category .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .tools-category .tools-grid {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                gap: 12px;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .tools-category .tools-grid::-webkit-scrollbar {
+                display: none;
+            }
+            .tools-category .tool-card {
+                flex-shrink: 0;
+                min-width: 140px;
+            }
         }
 
         .tools-heading {
@@ -461,18 +1119,19 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
         .skill-card {
-            padding: 32px;
-            background: linear-gradient(145deg, #2A1B3E 0%, #1F1032 100%);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 48px 40px;
+            background: linear-gradient(145deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(155, 123, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-sizing: border-box;
         }
 
         .skill-card::before {
@@ -482,15 +1141,15 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent), transparent);
+            background: linear-gradient(90deg, #9B7BFF, #c4a4ff);
             opacity: 0;
             transition: opacity 0.3s;
         }
 
         .skill-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(155, 123, 255, 0.15);
-            border-color: var(--accent);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(155, 123, 255, 0.25);
+            border-color: rgba(155, 123, 255, 0.5);
         }
 
         .skill-card:hover::before {
@@ -498,33 +1157,131 @@
         }
 
         .skill-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #3D2E52 0%, #2A1B3E 100%);
-            border-radius: 12px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(155, 123, 255, 0.15) 0%, rgba(155, 123, 255, 0.05) 100%);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
+            margin-bottom: 24px;
+            font-size: 26px;
+            border: 1px solid rgba(155, 123, 255, 0.2);
         }
 
         .skill-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--primary);
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.3px;
         }
 
         .skill-card p {
             font-size: 15px;
-            color: var(--secondary);
-            line-height: 1.6;
+            color: #B8B0C8;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop-specific constraints (screens above 1024px) */
+        @media (min-width: 1025px) {
+            /* Container constraint */
+            .container {
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+
+            /* Hero inner grid ratio - clean 50/50 split */
+            .hero-inner {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 100px !important;
+            }
+
+            /* Projects section - increased padding for fine whitespace */
+            .projects {
+                padding: 120px 80px;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+
+            .projects-grid {
+                gap: 100px;
+                max-width: 100%;
+            }
+
+            .featured-project {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+                align-items: flex-start;
+                max-width: 100%;
+            }
+
+            /* Project image - max 550px, contain */
+            .project-image {
+                max-width: 550px;
+                height: auto;
+                max-height: 600px;
+                overflow: hidden;
+                background-size: contain;
+                background-position: center;
+            }
+
+            /* Project content - max 600px for text */
+            .project-content {
+                max-width: 600px;
+            }
+
+            .project-content h3 {
+                font-size: 28px;
+                margin-bottom: 16px;
+            }
+
+            .project-description {
+                margin-bottom: 24px;
+            }
+
+            /* Case study sections */
+            .case-study-section {
+                margin-bottom: 20px;
+            }
+
+            .case-study-section h4 {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .case-study-section p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            /* Featured Projects title scale */
+            .section-title {
+                font-size: 42px;
+                text-align: center;
+                margin-bottom: 48px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .skill-card {
+                padding: 36px 28px;
+            }
         }
 
         /* Projects Section */
         .projects {
-            padding: 120px 0;
+            padding: 120px 80px;
             background: linear-gradient(180deg, #1A0B2E 0%, #23103D 50%, #1A0B2E 100%);
             position: relative;
         }
@@ -599,9 +1356,7 @@
         }
 
         .project-hr {
-            background-image: url(img/hrscreen.png);
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
         }
 
         .project-himclothiers {
@@ -610,6 +1365,70 @@
 
         .project-goalio {
             background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        }
+
+        .project-naijahome {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #4a2c7a 100%);
+        }
+
+        .project-errandhub {
+            background: linear-gradient(135deg, #0f2027 0%, #1a3a4a 50%, #2d5a6b 100%);
+        }
+
+        .project-airtime {
+            background: linear-gradient(135deg, #1e3a2f 0%, #2d5a4a 50%, #3d7a5f 100%);
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, rgba(155, 123, 255, 0.2) 0%, rgba(155, 123, 255, 0.1) 100%);
+            border: 1px solid rgba(155, 123, 255, 0.3);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .project-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: revealUp 0.6s ease forwards;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes revealUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .featured-project:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+            .featured-project:nth-child(even) .project-image {
+                order: 0;
+            }
+            .tech-stack {
+                justify-content: center;
+            }
         }
 
         .project-content h3 {
@@ -760,11 +1579,28 @@
         .nav-hamburger {
             display: none;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             gap: 5px;
             cursor: pointer;
-            padding: 4px;
+            padding: 8px;
             background: none;
             border: none;
+            width: 40px;
+            height: 40px;
+        }
+        .nav-hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
         }
         .nav-hamburger span {
             display: block;
@@ -773,6 +1609,15 @@
             background: var(--primary);
             border-radius: 2px;
             transition: all 0.3s;
+        }
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
         /* Mobile nav drawer */
@@ -807,91 +1652,6 @@
             padding-left: 8px;
         }
 
-        @media (max-width: 768px) {
-
-            /* Nav */
-            .nav-links { display: none; }
-            .nav-hamburger { display: flex; }
-
-            /* Hero */
-            .hero-inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-            .hero-image-col { order: -1; }
-            .hero-image-wrap,
-            .hero-image-wrap img { width: 220px; height: 220px; }
-            .hero-badge { right: 0; bottom: 8px; font-size: 11px; }
-            .hero h1 { font-size: clamp(40px, 12vw, 56px); letter-spacing: -2px; }
-            .hero-desc { max-width: 100%; }
-            .hero-quote { text-align: left; }
-            .cta-group { justify-content: center; }
-
-            /* About */
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .tools-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .about-text { font-size: 16px; }
-
-            /* Skills */
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            /* Projects */
-            .featured-project,
-            .featured-project:nth-child(even) {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .featured-project:nth-child(even) .project-image {
-                order: 0;
-            }
-            .projects-grid { gap: 64px; }
-            .project-content h3 { font-size: 24px; }
-
-            /* Contact */
-            .contact h2 { font-size: 32px; }
-            .contact-options { width: 100%; }
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-
-            /* Footer */
-            .footer-content {
-                flex-direction: column;
-                gap: 24px;
-                text-align: center;
-            }
-            .social-links { 
-                justify-content: center; 
-                gap: 20px 24px; 
-            }
-
-            /* Section padding */
-            .about,
-            .skills,
-            .projects,
-            .contact { padding: 80px 0; }
-        }
-
-        @media (max-width: 480px) {
-            .tools-grid { grid-template-columns: 1fr; }
-            .hero-image-wrap,
-            .hero-image-wrap img { width: 180px; height: 180px; }
-            .contact h2 { font-size: 28px; }
-            .section-header h2 { font-size: 28px; }
-            .section-label { font-size: 12px; }
-            .skill-card { padding: 24px; }
-            .hero-badge { font-size: 10px; padding: 6px 12px; }
-            .social-links { gap: 12px 20px; }
-        }
         /* Resume Modal */
         .resume-modal-overlay {
             display: none;
@@ -1028,6 +1788,430 @@
             .resume-download { padding: 6px 12px; font-size: 12px; }
         }
 
+        /* ========== COMPREHENSIVE MOBILE RESPONSIVENESS ========== */
+        @media (max-width: 768px) {
+            /* Global mobile reset */
+            *, *::before, *::after {
+                box-sizing: border-box;
+                max-width: 100%;
+            }
+            
+            html, body {
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 20px !important;
+                max-width: 100%;
+            }
+
+            /* ========== HERO SECTION ========== */
+            .hero {
+                min-height: auto !important;
+                padding: 90px 20px 50px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .hero-inner {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 32px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .hero-content {
+                order: 2;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+            }
+
+            .hero-image-col {
+                order: 1;
+                width: 100% !important;
+                max-width: 100% !important;
+                display: flex;
+                justify-content: center !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .hero-image-wrap, .hero-image-wrap img {
+                width: 220px !important;
+                height: 220px !important;
+            }
+
+            .hero-hello {
+                font-size: 14px !important;
+                margin-bottom: 8px;
+            }
+
+            .hero h1 {
+                font-size: clamp(24px, 7vw, 32px) !important;
+                line-height: 1.2 !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                margin-bottom: 12px;
+            }
+
+            .static-text {
+                display: block;
+            }
+
+            .typing-wrapper {
+                display: block !important;
+                min-width: auto !important;
+            }
+
+            .typing-text {
+                font-size: clamp(16px, 4vw, 22px) !important;
+            }
+
+            .hero-desc {
+                font-size: 15px !important;
+                line-height: 1.6 !important;
+                max-width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            .cta-group {
+                display: flex;
+                flex-direction: column !important;
+                gap: 12px;
+                width: 100%;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary, .btn-resume {
+                width: 100% !important;
+                max-width: 280px !important;
+                justify-content: center !important;
+                padding: 14px 20px !important;
+                font-size: 15px !important;
+            }
+
+            .hero-badge {
+                right: 10px !important;
+                bottom: 10px !important;
+                font-size: 10px !important;
+            }
+
+            /* ========== ABOUT SECTION ========== */
+            .about {
+                padding: 60px 20px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .about-content {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 24px !important;
+                width: 100% !important;
+            }
+
+            .section-header {
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 24px !important;
+            }
+
+            .section-label {
+                font-size: 12px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .tools-panel {
+                width: 100% !important;
+            }
+
+            .tools-category {
+                width: 100% !important;
+                margin-bottom: 16px;
+            }
+
+            .tools-heading {
+                text-align: center !important;
+                font-size: 12px !important;
+                margin-bottom: 10px;
+            }
+
+            .tools-grid {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                gap: 10px !important;
+                padding: 10px 5px;
+                width: 100%;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .tools-grid::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tool-card {
+                flex-shrink: 0 !important;
+                min-width: 110px !important;
+                padding: 12px !important;
+            }
+
+            .tool-icon {
+                width: 28px !important;
+                height: 28px !important;
+            }
+
+            .tool-icon svg {
+                width: 16px !important;
+                height: 16px !important;
+            }
+
+            .tool-name {
+                font-size: 11px !important;
+            }
+
+            .tool-type {
+                font-size: 9px !important;
+            }
+
+            .about-text {
+                width: 100% !important;
+                font-size: 14px !important;
+                line-height: 1.7 !important;
+                text-align: center !important;
+                order: 2;
+            }
+
+            /* ========== SKILLS SECTION ========== */
+            .skills {
+                padding: 60px 20px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .section-title {
+                font-size: 26px !important;
+                text-align: center !important;
+                margin-bottom: 28px !important;
+            }
+
+            .skills-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+                width: 100% !important;
+            }
+
+            .skill-card {
+                width: 100% !important;
+                padding: 24px 20px !important;
+                text-align: center !important;
+            }
+
+            .skill-icon {
+                width: 48px !important;
+                height: 48px !important;
+                font-size: 22px !important;
+                margin-bottom: 16px !important;
+            }
+
+            .skill-card h3 {
+                font-size: 18px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .skill-card p {
+                font-size: 13px !important;
+                line-height: 1.6 !important;
+            }
+
+            /* ========== PROJECTS SECTION ========== */
+            .projects {
+                padding: 60px 20px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .projects-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 40px !important;
+                width: 100% !important;
+            }
+
+            .featured-project {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .project-image {
+                width: 100% !important;
+                max-width: 100% !important;
+                aspect-ratio: 16/9 !important;
+                border-radius: 16px !important;
+                margin-bottom: 20px;
+            }
+
+            .project-content {
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .project-content h3 {
+                font-size: 20px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .project-description {
+                font-size: 14px !important;
+                margin-bottom: 16px !important;
+            }
+
+            .tech-stack {
+                justify-content: center !important;
+                margin-bottom: 20px !important;
+            }
+
+            .tech-badge {
+                font-size: 11px !important;
+                padding: 5px 10px !important;
+            }
+
+            .case-study-section {
+                text-align: left !important;
+                margin-bottom: 16px !important;
+            }
+
+            .case-study-section h4 {
+                font-size: 15px !important;
+                margin-bottom: 6px !important;
+            }
+
+            .case-study-section p {
+                font-size: 13px !important;
+                line-height: 1.6 !important;
+            }
+
+            .project-cta {
+                text-align: center !important;
+            }
+
+            .project-cta .btn-primary {
+                width: auto !important;
+                max-width: none !important;
+                padding: 12px 24px !important;
+            }
+
+            /* ========== CONTACT SECTION ========== */
+            .contact {
+                padding: 60px 20px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .contact h2 {
+                font-size: 26px !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+                margin-bottom: 16px !important;
+            }
+
+            .contact p {
+                font-size: 14px !important;
+                line-height: 1.7 !important;
+                text-align: center !important;
+                margin-bottom: 24px !important;
+            }
+
+            .contact-options {
+                flex-direction: column !important;
+                gap: 12px !important;
+                align-items: center !important;
+            }
+
+            .contact-options a {
+                width: 100% !important;
+                max-width: 280px !important;
+                justify-content: center !important;
+            }
+
+            .contact-note {
+                font-size: 12px !important;
+                margin-top: 20px !important;
+                text-align: center !important;
+            }
+
+            /* ========== FOOTER ========== */
+            .footer {
+                padding: 40px 20px !important;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .footer-content {
+                flex-direction: column !important;
+                gap: 20px !important;
+                text-align: center !important;
+            }
+
+            .social-links {
+                flex-direction: column !important;
+                gap: 12px !important;
+                align-items: center !important;
+            }
+
+            .footer p {
+                font-size: 13px !important;
+            }
+
+            /* ========== NAVIGATION ========== */
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-hamburger {
+                display: flex !important;
+            }
+
+            .mobile-menu {
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+        }
+
+        /* ========== SMALL MOBILE (< 400px) ========== */
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: clamp(20px, 6vw, 26px) !important;
+            }
+
+            .typing-text {
+                font-size: clamp(14px, 4vw, 18px) !important;
+            }
+
+            .section-title {
+                font-size: 22px !important;
+            }
+
+            .btn-primary, .btn-secondary, .btn-resume {
+                padding: 12px 16px !important;
+                font-size: 14px !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1064,10 +2248,14 @@
                 <!-- Left: Text -->
                 <div class="hero-content">
                     <span class="hero-hello">Hello! I am</span>
-                    <h1>Isah David</h1>
-                    <span class="hero-role">UI/UX Designer</span>
-                    <p class="hero-desc">I design digital products that feel simple, intuitive, and actually make sense.</p>
-                    <p class="hero-quote">I don't just make it look good—I make it work.</p>
+                    <h1 class="hero-title">
+                        <span class="static-text">Isah David — </span>
+                        <span class="typing-wrapper">
+                            <span class="typing-text" id="typingText"></span>
+                            <span class="typing-cursor">|</span>
+                        </span>
+                    </h1>
+                    <p class="hero-desc">Building premium digital experiences with 3 years of design expertise and a high-performance development stack.</p>
                     <div class="cta-group">
                         <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I%20'm%20interested%20in%20working%20with%20you" class="btn-primary" target="_blank">
                             Get In Touch
@@ -1102,98 +2290,157 @@
                 <div class="section-label">About Me</div>
             </div>
             <div class="about-content">
-                <!-- Left: Tools I Use -->
+                <!-- Left: Tools I Use (Two Categories) -->
                 <div class="tools-panel">
-                    <div class="tools-heading">Tools I Use</div>
-                    <div class="tools-grid">
-
-                        <!-- Figma -->
-                        <div class="tool-card">
-                            <div class="tool-icon">
-                                <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE"/>
-                                    <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83"/>
-                                    <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262"/>
-                                    <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#FF3A59"/>
-                                    <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF"/>
-                                </svg>
+                    <!-- Design Category -->
+                    <div class="tools-category">
+                        <div class="tools-heading">Design</div>
+                        <div class="tools-grid">
+                            <!-- Figma -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE"/>
+                                        <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83"/>
+                                        <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262"/>
+                                        <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#FF3A59"/>
+                                        <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Figma</div>
+                                    <div class="tool-type">UI Design</div>
+                                </div>
                             </div>
-                            <div>
-                                <div class="tool-name">Figma</div>
-                                <div class="tool-type">UI Design</div>
+
+                            <!-- Adobe XD -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="36" height="36" rx="8" fill="#470137"/>
+                                        <path d="M14.6 22.4L13.1 25.7C13 25.9 12.8 26 12.6 26H10.3C10 26 9.9 25.8 10 25.6L15.8 13C15.9 12.8 16 12.7 16.1 12.7H18.6C18.8 12.7 18.9 12.8 19 13L24.9 25.6C25 25.8 24.9 26 24.6 26H22.1C21.9 26 21.7 25.9 21.6 25.7L20.1 22.4H14.6ZM17.4 16.2L15.4 20.4H19.3L17.4 16.2Z" fill="#FF61F6"/>
+                                        <path d="M25 13.8C25 13.6 25.1 13.5 25.3 13.5H27.6C27.8 13.5 27.9 13.6 27.9 13.8V25.7C27.9 25.9 27.8 26 27.6 26H25.3C25.1 26 25 25.9 25 25.7V13.8Z" fill="#FF61F6"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Adobe XD</div>
+                                    <div class="tool-type">Prototyping</div>
+                                </div>
+                            </div>
+
+                            <!-- Photoshop -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="36" height="36" rx="8" fill="#001D34"/>
+                                        <path d="M10 10H15.5C17.2 10 18.6 10.5 19.6 11.5C20.6 12.5 21.1 13.8 21.1 15.4C21.1 17 20.6 18.3 19.5 19.3C18.5 20.3 17 20.8 15.2 20.8H12.3V26H10V10ZM12.3 12.1V18.7H15C16.2 18.7 17.1 18.4 17.7 17.8C18.3 17.2 18.7 16.4 18.7 15.4C18.7 14.4 18.4 13.6 17.7 13C17 12.4 16.1 12.1 15 12.1H12.3Z" fill="#31A8FF"/>
+                                        <path d="M22 22.2C22 21.2 22.3 20.3 22.8 19.6C23.3 18.9 24.1 18.4 25.1 18.1L26.7 17.7V16.9C26.7 16.4 26.6 16 26.3 15.7C26 15.4 25.6 15.3 25.1 15.3C24.6 15.3 24.2 15.4 23.9 15.7C23.7 15.9 23.5 16.2 23.4 16.6H21.3C21.4 15.6 21.8 14.8 22.5 14.2C23.2 13.6 24.1 13.3 25.2 13.3C26.3 13.3 27.2 13.6 27.9 14.2C28.6 14.8 28.9 15.7 28.9 16.8V22.5C28.9 23 29 23.5 29.1 24H27C26.9 23.6 26.9 23.1 26.8 22.6C26.5 23.1 26.1 23.5 25.6 23.8C25.1 24.1 24.5 24.2 23.9 24.2C23.1 24.2 22.5 23.9 22 23.4C21.6 22.9 22 22.4 22 22.2ZM25.5 22.3C26 22 26.4 21.6 26.7 21.1V19.3L25.3 19.7C24.8 19.9 24.4 20.1 24.1 20.4C23.8 20.7 23.7 21.1 23.7 21.5C23.7 21.9 23.8 22.2 24 22.4C24.2 22.6 24.5 22.7 24.9 22.7C25.1 22.7 25.3 22.6 25.5 22.3Z" fill="#31A8FF"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Photoshop</div>
+                                    <div class="tool-type">Image Editing</div>
+                                </div>
+                            </div>
+
+                            <!-- Illustrator -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="36" height="36" rx="8" fill="#1A0A00"/>
+                                        <path d="M14.9 22.5L13.3 26H11L16.9 12H19.2L25.1 26H22.7L21.1 22.5H14.9ZM20.3 20.7L18 14.8L15.7 20.7H20.3Z" fill="#FF9A00"/>
+                                        <path d="M26.5 12.5C26.5 13.3 25.9 13.9 25.1 13.9C24.3 13.9 23.7 13.3 23.7 12.5C23.7 11.7 24.3 11.1 25.1 11.1C25.9 11.1 26.5 11.7 26.5 12.5ZM24 16H26.2V26H24V16Z" fill="#FF9A00"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Illustrator</div>
+                                    <div class="tool-type">Vector Design</div>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Adobe XD -->
-                        <div class="tool-card">
-                            <div class="tool-icon">
-                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="36" height="36" rx="8" fill="#470137"/>
-                                    <path d="M14.6 22.4L13.1 25.7C13 25.9 12.8 26 12.6 26H10.3C10 26 9.9 25.8 10 25.6L15.8 13C15.9 12.8 16 12.7 16.1 12.7H18.6C18.8 12.7 18.9 12.8 19 13L24.9 25.6C25 25.8 24.9 26 24.6 26H22.1C21.9 26 21.7 25.9 21.6 25.7L20.1 22.4H14.6ZM17.4 16.2L15.4 20.4H19.3L17.4 16.2Z" fill="#FF61F6"/>
-                                    <path d="M25 13.8C25 13.6 25.1 13.5 25.3 13.5H27.6C27.8 13.5 27.9 13.6 27.9 13.8V25.7C27.9 25.9 27.8 26 27.6 26H25.3C25.1 26 25 25.9 25 25.7V13.8Z" fill="#FF61F6"/>
-                                </svg>
+                    <!-- Development Category -->
+                    <div class="tools-category">
+                        <div class="tools-heading">Development</div>
+                        <div class="tools-grid">
+                            <!-- React.js -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="16" cy="16" r="14" fill="#61DAFB"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.6 22.4C6.8 21.3 5 18.5 5 15.5C5 12.4 6.9 9.6 9.7 8.6L10 10.7C8.5 11.5 7.5 13.5 7.5 15.5C7.5 17.4 8.5 19.4 10 20.2L9.6 22.4ZM16 26.8C18.8 25.5 21 22.4 21 19C21 15.6 18.8 12.5 16 11.2V14C17.4 14.8 18.5 16.3 18.5 19C18.5 21.7 17.4 23.2 16 24V26.8ZM12.4 9.8C11.9 9.3 11.2 9 10.5 9C9.7 9 9 9.3 8.6 9.8L8.3 10.1L9.6 12.8C9.8 12.5 10.1 12.2 10.5 12C10.9 11.8 11.3 11.7 11.8 11.7C12.3 11.7 12.8 11.9 13.2 12.2L14.5 10.3L12.4 9.8ZM22.4 9.8L22.3 9.9C22.1 10.2 21.9 10.5 21.6 10.8C21.3 11 20.9 11.2 20.5 11.2C19.9 11.2 19.4 10.9 19 10.4L16.5 12.5L17.8 14.9C18.2 14.6 18.6 14.4 19 14.3C19.4 14.2 19.9 14.2 20.3 14.4C20.7 14.6 21.1 14.9 21.4 15.3C21.7 15.7 21.9 16.2 21.9 16.7C21.9 17.4 21.6 18 21.1 18.4L22.3 19.6L22.5 19.4C24.1 17.9 25 15.9 25 13.8C25 12.4 24.5 11.1 23.7 10L22.4 9.8ZM10 21.5L9.6 23.8C11.5 24.5 13.1 25.9 14.1 27.7L15.3 25.5C14.1 24 12.8 22.9 11.4 22.2L10 21.5ZM16 5V8.2C17.8 9.3 19.2 11.1 19.8 13.3L21 11.2C20.2 8.8 18.4 6.8 16 5ZM21.5 17.1C21.9 16.5 22.1 15.8 22.1 15C22.1 13.8 21.6 12.7 20.8 11.9L19.5 14.1C20 14.6 20.3 15.3 20.3 16C20.3 16.7 20 17.3 19.4 17.8L21.5 17.1ZM10.5 24C11.4 24.6 12.3 25.1 13.2 25.5L14 23.5C13.2 23.1 12.5 22.7 11.7 22.2L10.5 24ZM17 25.5C17.9 25.1 18.8 24.6 19.7 24L18.5 22.5C17.7 22.9 17 23.3 16.2 23.7L17 25.5Z" fill="#1A0B2E"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">React.js</div>
+                                    <div class="tool-type">Frontend</div>
+                                </div>
                             </div>
-                            <div>
-                                <div class="tool-name">Adobe XD</div>
-                                <div class="tool-type">Prototyping</div>
+
+                            <!-- TypeScript -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32" height="32" rx="4" fill="#3178C6"/>
+                                        <path d="M7.5 8H12V24H8.5V16.5H7V24H3.5V8H7.5ZM17.5 8H21L23.5 14.5L26 8H29.5V24H26V12.5L23.5 18H23L20.5 12.5V24H17.5V8Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">TypeScript</div>
+                                    <div class="tool-type">Language</div>
+                                </div>
+                            </div>
+
+                            <!-- Tailwind CSS -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32" height="32" rx="4" fill="#06B6D4"/>
+                                        <path d="M10 8C10 8 12 12 16 12C20 12 22 8 22 8M10 16C10 16 12 20 16 20C20 20 22 16 22 16M10 24C10 24 12 20 16 20C20 20 22 24 22 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Tailwind CSS</div>
+                                    <div class="tool-type">Styling</div>
+                                </div>
+                            </div>
+
+                            <!-- Supabase -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32" height="32" rx="4" fill="#3ECF8E"/>
+                                        <path d="M22.5 12L16 20L9.5 12H22.5Z" fill="white"/>
+                                        <path d="M16 24L9.5 16H22.5L16 24Z" fill="white" fill-opacity="0.7"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Supabase</div>
+                                    <div class="tool-type">Backend</div>
+                                </div>
+                            </div>
+
+                            <!-- Antigravity -->
+                            <div class="tool-card">
+                                <div class="tool-icon">
+                                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="16" cy="16" r="14" stroke="#9B7BFF" stroke-width="2" fill="none"/>
+                                        <path d="M16 6V26M6 16H26" stroke="#9B7BFF" stroke-width="2"/>
+                                        <circle cx="16" cy="16" r="6" fill="#9B7BFF"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="tool-name">Antigravity</div>
+                                    <div class="tool-type">Framework</div>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Photoshop -->
-                        <div class="tool-card">
-                            <div class="tool-icon">
-                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="36" height="36" rx="8" fill="#001D34"/>
-                                    <path d="M10 10H15.5C17.2 10 18.6 10.5 19.6 11.5C20.6 12.5 21.1 13.8 21.1 15.4C21.1 17 20.6 18.3 19.5 19.3C18.5 20.3 17 20.8 15.2 20.8H12.3V26H10V10ZM12.3 12.1V18.7H15C16.2 18.7 17.1 18.4 17.7 17.8C18.3 17.2 18.7 16.4 18.7 15.4C18.7 14.4 18.4 13.6 17.7 13C17 12.4 16.1 12.1 15 12.1H12.3Z" fill="#31A8FF"/>
-                                    <path d="M22 22.2C22 21.2 22.3 20.3 22.8 19.6C23.3 18.9 24.1 18.4 25.1 18.1L26.7 17.7V16.9C26.7 16.4 26.6 16 26.3 15.7C26 15.4 25.6 15.3 25.1 15.3C24.6 15.3 24.2 15.4 23.9 15.7C23.7 15.9 23.5 16.2 23.4 16.6H21.3C21.4 15.6 21.8 14.8 22.5 14.2C23.2 13.6 24.1 13.3 25.2 13.3C26.3 13.3 27.2 13.6 27.9 14.2C28.6 14.8 28.9 15.7 28.9 16.8V22.5C28.9 23 29 23.5 29.1 24H27C26.9 23.6 26.9 23.1 26.8 22.6C26.5 23.1 26.1 23.5 25.6 23.8C25.1 24.1 24.5 24.2 23.9 24.2C23.1 24.2 22.5 23.9 22 23.4C21.6 22.9 22 22.4 22 22.2ZM25.5 22.3C26 22 26.4 21.6 26.7 21.1V19.3L25.3 19.7C24.8 19.9 24.4 20.1 24.1 20.4C23.8 20.7 23.7 21.1 23.7 21.5C23.7 21.9 23.8 22.2 24 22.4C24.2 22.6 24.5 22.7 24.9 22.7C25.1 22.7 25.3 22.6 25.5 22.3Z" fill="#31A8FF"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="tool-name">Photoshop</div>
-                                <div class="tool-type">Image Editing</div>
-                            </div>
-                        </div>
-
-                        <!-- Illustrator -->
-                        <div class="tool-card">
-                            <div class="tool-icon">
-                                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="36" height="36" rx="8" fill="#1A0A00"/>
-                                    <path d="M14.9 22.5L13.3 26H11L16.9 12H19.2L25.1 26H22.7L21.1 22.5H14.9ZM20.3 20.7L18 14.8L15.7 20.7H20.3Z" fill="#FF9A00"/>
-                                    <path d="M26.5 12.5C26.5 13.3 25.9 13.9 25.1 13.9C24.3 13.9 23.7 13.3 23.7 12.5C23.7 11.7 24.3 11.1 25.1 11.1C25.9 11.1 26.5 11.7 26.5 12.5ZM24 16H26.2V26H24V16Z" fill="#FF9A00"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="tool-name">Illustrator</div>
-                                <div class="tool-type">Vector Design</div>
-                            </div>
-                        </div>
-
-                        <!-- VS Code -->
-                        <div class="tool-card">
-                            <div class="tool-icon">
-                                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M29.3 4.4L22.6 1.2C22 0.9 21.3 1 20.8 1.4L1.4 18.4C0.9 18.9 0.9 19.7 1.4 20.2L3.8 22.4C4.3 22.9 5.1 22.9 5.7 22.5L27.3 7.7C28.2 7.1 29.5 7.7 29.5 8.8V8.6C29.5 6.8 28.6 5.1 29.3 4.4Z" fill="#0065A9"/>
-                                    <path d="M29.3 27.6L22.6 30.8C22 31.1 21.3 31 20.8 30.6L1.4 13.6C0.9 13.1 0.9 12.3 1.4 11.8L3.8 9.6C4.3 9.1 5.1 9.1 5.7 9.5L27.3 24.3C28.2 24.9 29.5 24.3 29.5 23.2V23.4C29.5 25.2 28.6 26.9 29.3 27.6Z" fill="#007ACC"/>
-                                    <path d="M22.6 30.8C22 31.1 21.3 31 20.8 30.6C21.4 31.1 22.4 30.7 22.4 29.9V2.1C22.4 1.3 21.4 0.9 20.8 1.4C21.3 1 22 0.9 22.6 1.2C23.7 1.7 24.4 2.8 24.4 4V28C24.4 29.2 23.7 30.3 22.6 30.8Z" fill="#1F9CF0"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <div class="tool-name">VS Code</div>
-                                <div class="tool-type">Code Editor</div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
-                <!-- Right: About Text (unchanged) -->
                 <div class="about-text">
-                    <p>I'm <strong>Isah David</strong>, a product designer who sits at the intersection of business goals and user needs. Five years in, I've learned that great design isn't just about making things look good—it's about removing friction, clarifying complexity, and creating moments of delight that keep users coming back.</p>
-
-                    <p>I specialize in taking messy, undefined problems and shaping them into focused, testable solutions. Whether it's building a design system from scratch or redesigning a legacy product, I bring the same energy: deep research, rapid iteration, and obsessive attention to the details that matter.</p>
-
-                    <p>Currently based in Nigeria, working with clients globally. When I'm not pushing pixels, you'll find me catching up on football—yes, I'm a Manchester United fan through and through.</p>
+                    <p>I am <strong>Isah David</strong>, a Product Designer and Web Developer building at the intersection of high-end aesthetics and high-performance code. With 3 years of deep design experience, I've evolved into a technical role where I don't just envision digital products—I engineer them. I specialize in scalable systems and premium interfaces, utilizing a modern stack that ensures every pixel is as functional as it is beautiful.</p>
                 </div>
             </div>
         </div>
@@ -1204,37 +2451,45 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-label">What I Do</div>
-                <h2>Skills & Services</h2>
             </div>
+            <h2 class="section-title">Skills & Services</h2>
             <div class="skills-grid">
+                <!-- Row 1: Design & Strategy -->
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
                     <h3>UI/UX Design</h3>
-                    <p>Crafting interfaces that balance aesthetic appeal with functional clarity. From landing pages to complex dashboards, every pixel serves a purpose.</p>
+                    <p>Crafting interfaces that balance aesthetic appeal with functional clarity. 3 years of building design systems and seamless flows with Figma.</p>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">🚀</div>
                     <h3>Product Design</h3>
-                    <p>End-to-end product thinking—from discovery and strategy through to launch and iteration. I design the full experience, not just the screens.</p>
+                    <p>End-to-end product thinking—from discovery and strategy through to launch and iteration. Engineering the full experience, not just screens.</p>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">⚡</div>
                     <h3>Wireframing & Prototyping</h3>
-                    <p>Rapid validation through low-fi sketches to high-fidelity interactive prototypes. Test early, fail fast, ship confidently.</p>
+                    <p>Rapid validation through low-fi sketches to high-fidelity, interactive prototypes. Test early, fail fast, ship confidently.</p>
+                </div>
+
+                <!-- Row 2: Development & Technology -->
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Frontend Engineering</h3>
+                    <p>Building high-performance web applications using React.js, TypeScript, and Tailwind CSS. Focused on clean, scalable code and seamless responsiveness.</p>
                 </div>
 
                 <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <h3>User Research</h3>
-                    <p>Data-informed design decisions through interviews, usability testing, and analytics. I let user behavior guide the strategy.</p>
+                    <div class="skill-icon">🌌</div>
+                    <h3>Advanced Tooling</h3>
+                    <p>Integrating modern backend and utility tools like Supabase for real-time data and Antigravity for high-velocity, lightweight web interactions.</p>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">🧩</div>
-                    <h3>Design Systems</h3>
-                    <p>Building scalable component libraries that keep teams aligned and products consistent. Design at scale without losing soul.</p>
+                    <h3>System Architecture</h3>
+                    <p>Designing and developing complex, multi-portal ecosystems, such as the User, Runner, and Admin platforms engineered for ErrandHub.</p>
                 </div>
             </div>
         </div>
@@ -1249,34 +2504,115 @@
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1: HR Dashboard -->
-                <div id="testing" class="featured-project">
-                    <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1" target="_blank" class="project-image project-hr">
-                      
+                <!-- Project 1: Luxury Dwelling Estates -->
+                <div class="featured-project project-card">
+                    <a href="#" class="project-image project-naijahome">
+                        <span>Luxury Dwelling Estates</span>
+                    </a>
+
+                    <div class="project-content">
+                        <h3>Luxury Dwelling Estates — Premium Real Estate Engine</h3>
+                        <p class="project-description">A sophisticated real estate platform redefining property discovery in Nigeria. Built with React for advanced search capabilities and Supabase for robust data management.</p>
+
+                        <div class="tech-stack">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">TypeScript</span>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Challenge</h4>
+                            <p>Nigeria's real estate market lacked a centralized, trustworthy platform for property seekers. Users faced fragmented listings, unreliable data, and a disconnected agent-to-buyer experience.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>Technical Implementation</h4>
+                            <p>Engineered a React-powered advanced search engine with filters for location, price range, property type, and amenities. Leveraged Supabase for real-time database operations, secure authentication, and scalable backend infrastructure. Implemented lazy loading and memoization for optimal performance.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Result</h4>
+                            <p>Created a seamless property discovery experience with 40% faster search results, real-time listing updates, and a 60% increase in user engagement.</p>
+                        </div>
+
+                        <div class="project-cta">
+                            <a href="#" class="btn-primary" target="_blank">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: ErrandHub -->
+                <div class="featured-project project-card">
+                    <a href="#" class="project-image project-errandhub">
+                        <span>ErrandHub</span>
+                    </a>
+
+                    <div class="project-content">
+                        <h3>ErrandHub — Multi-Portal Ecosystem</h3>
+                        <p class="project-description">A comprehensive task management ecosystem with distinct portals for Users, Runners, and Administrators. Built with TypeScript architecture and real-time logic.</p>
+
+                        <div class="tech-stack">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Supabase</span>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Challenge</h4>
+                            <p>ErrandHub needed to serve three distinct user types with unique workflows while maintaining a unified, seamless experience across all portals.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>Technical Implementation</h4>
+                            <p>Developed a TypeScript-based architecture ensuring type safety across the entire codebase. Implemented real-time WebSocket connections via Supabase for instant task assignments and status updates. Built a role-based access control system with distinct dashboards for each user type.</p>
+                        </div>
+
+                        <div class="case-study-section">
+                            <h4>The Result</h4>
+                            <p>Delivered a scalable multi-portal system with 99.9% uptime, real-time task dispatch with sub-3-second response times, and a 45% reduction in task completion time.</p>
+                        </div>
+
+                        <div class="project-cta">
+                            <a href="https://errandhub-v63n.vercel.app" class="btn-primary" target="_blank">
+                                View Project
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: HR Management Dashboard -->
+                <div class="featured-project project-card">
+                    <a href="#" class="project-image project-hr">
+                        <span>HR Management Dashboard</span>
                     </a>
 
                     <div class="project-content">
                         <h3>HR Management Dashboard</h3>
                         <p class="project-description">A complete redesign of workforce management for a growing tech company. Turning HR chaos into clarity through thoughtful information architecture and human-centered design.</p>
 
+                        <div class="tech-stack">
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge">UI/UX Design</span>
+                            <span class="tech-badge">Design System</span>
+                        </div>
+
                         <div class="case-study-section">
                             <h4>The Problem</h4>
-                            <p>HR teams were drowning in fragmented tools—spreadsheets, emails, and legacy software that didn't talk to each other. Employee data was scattered, onboarding took weeks, and managers lacked visibility into team performance. The existing system was costing time, money, and talent.</p>
+                            <p>HR teams were drowning in fragmented tools—spreadsheets, emails, and legacy software that didn't talk to each other. Employee data was scattered, onboarding took weeks, and managers lacked visibility into team performance.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Process</h4>
-                            <p>Started with stakeholder interviews across HR, management, and employees to map pain points. Built user personas and journey maps, then moved into rapid wireframing and iterative prototyping. Weekly testing sessions with actual users kept us honest and on track.</p>
-                        </div>
-
-                        <div class="case-study-section">
-                            <h4>The Solution</h4>
-                            <p>Designed a unified dashboard that centralizes employee data, automates onboarding workflows, and gives managers real-time insights. Clean, modular interface with role-based views—HR sees everything, managers see their teams, employees see their growth.</p>
+                            <p>Started with stakeholder interviews across HR, management, and employees to map pain points. Built user personas and journey maps, then moved into rapid wireframing and iterative prototyping.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Result</h4>
-                            <p>Reduced onboarding time by 60%, cut HR admin work by 40%, and improved employee satisfaction scores. The design system I built is now being rolled out across the company's entire product suite.</p>
+                            <p>Reduced onboarding time by 60%, cut HR admin work by 40%, and improved employee satisfaction scores.</p>
                         </div>
 
                         <div class="project-cta">
@@ -1288,34 +2624,35 @@
                     </div>
                 </div>
 
-                <!-- Project 2: HimClothiers -->
-                <div class="featured-project">
+                <!-- Project 5: HimClothiers -->
+                <div class="featured-project project-card">
                     <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=0-1&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="project-image project-himclothiers">
                         <span>HimClothiers E-Commerce</span>
                     </a>
 
                     <div class="project-content">
                         <h3>HimClothiers — Premium Menswear E-Commerce</h3>
-                        <p class="project-description">A luxury fashion e-commerce experience designed for the modern Nigerian man. Blending contemporary aesthetics with seamless shopping flows to elevate a local brand to international standards.</p>
+                        <p class="project-description">A luxury fashion e-commerce experience designed for the modern Nigerian man. Blending contemporary aesthetics with seamless shopping flows.</p>
 
-                        <div class="case-study-section">
-                            <h4>The Problem</h4>
-                            <p>HimClothiers had exceptional products but a digital presence that didn't match their quality. The existing site suffered from high bounce rates (68%), abandoned carts (74%), and a checkout process that frustrated mobile users. Customers couldn't visualize fit, fabric quality, or styling options—critical barriers in online fashion retail.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge">E-Commerce</span>
+                            <span class="tech-badge">Mobile-First</span>
                         </div>
 
                         <div class="case-study-section">
-                            <h4>The Process</h4>
-                            <p>Conducted competitive analysis of luxury fashion retailers (Mr Porter, SSENSE) and local Nigerian e-commerce patterns. Interviewed 20+ target customers to understand shopping behaviors. Mapped the entire purchase journey from discovery to unboxing, identifying friction points at size selection, payment trust, and delivery expectations.</p>
+                            <h4>The Problem</h4>
+                            <p>HimClothiers had exceptional products but a digital presence that didn't match their quality. The existing site suffered from high bounce rates (68%), abandoned carts (74%), and a checkout process that frustrated mobile users.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Solution</h4>
-                            <p>Designed a mobile-first experience with immersive product photography, detailed size guides with body-type recommendations, and a streamlined 3-step checkout. Added a "Style Guide" feature showing complete looks, AR fabric texture preview, and multiple payment options including local methods (Paystack, bank transfer) alongside international cards.</p>
+                            <p>Designed a mobile-first experience with immersive product photography, detailed size guides, and a streamlined 3-step checkout. Added a "Style Guide" feature and multiple payment options including Paystack.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Result</h4>
-                            <p>Bounce rate dropped to 34%, cart abandonment reduced to 41%, and mobile conversion increased by 156% within three months. Average order value grew 28% through the style guide upsells. The brand successfully launched international shipping to the UK and US based on the new platform's credibility.</p>
+                            <p>Bounce rate dropped to 34%, cart abandonment reduced to 41%, and mobile conversion increased by 156%.</p>
                         </div>
 
                         <div class="project-cta">
@@ -1327,34 +2664,35 @@
                     </div>
                 </div>
 
-                <!-- Project 3: GOALIO -->
-                <div class="featured-project">
+                <!-- Project 6: GOALIO -->
+                <div class="featured-project project-card">
                     <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=2-2049&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="project-image project-goalio">
                         <span>GOALIO Livescore App</span>
                     </a>
 
                     <div class="project-content">
                         <h3>GOALIO — Football Livescore & Stats App</h3>
-                        <p class="project-description">A real-time football livescore application designed for passionate fans who demand instant updates, deep statistics, and personalized match tracking. Bringing the stadium experience to the palm of your hand.</p>
+                        <p class="project-description">A real-time football livescore application for passionate fans who demand instant updates, deep statistics, and personalized match tracking.</p>
 
-                        <div class="case-study-section">
-                            <h4>The Problem</h4>
-                            <p>Football fans were frustrated with existing livescore apps that were either too cluttered with ads, too slow with updates, or missing crucial features like detailed player stats and push notifications for specific events (goals, red cards, substitutions). Most apps treated all users the same, ignoring the fact that a Manchester United fan in Lagos has different needs than a casual viewer.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Figma</span>
+                            <span class="tech-badge">Mobile App</span>
+                            <span class="tech-badge">UX Research</span>
                         </div>
 
                         <div class="case-study-section">
-                            <h4>The Process</h4>
-                            <p>Shadowed 15 football fans during match days to understand their behaviors—when they check scores, what triggers notifications, how they share moments with friends. Analyzed top competitors (FlashScore, SofaScore, FotMob) to identify gaps in the Nigerian market. Conducted card sorting exercises to organize 50+ data points per match into intuitive hierarchies.</p>
+                            <h4>The Problem</h4>
+                            <p>Football fans were frustrated with existing livescore apps that were cluttered with ads, too slow with updates, or missing crucial features like detailed player stats and push notifications.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Solution</h4>
-                            <p>Built a lightning-fast mobile experience with sub-second score updates, customizable notification triggers, and a "Match Pulse" feature showing momentum shifts through visual heatmaps. Designed a team-centric home screen that surfaces your club's news first, plus a social layer for celebrating goals with friends via quick-share graphics and reaction emojis.</p>
+                            <p>Built a lightning-fast mobile experience with sub-second score updates, customizable notification triggers, and a "Match Pulse" feature showing momentum shifts through visual heatmaps.</p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>The Result</h4>
-                            <p>Beta testing with 500 users showed 89% daily active retention during Premier League weekends. Average session time hit 12 minutes—3x industry standard. Push notification open rates reached 67% (vs. 15% average) due to hyper-relevant timing. Currently in closed beta with 2,000+ waitlist signups ahead of public launch.</p>
+                            <p>Beta testing with 500 users showed 89% daily active retention during Premier League weekends. Average session time hit 12 minutes—3x industry standard.</p>
                         </div>
 
                         <div class="project-cta">
@@ -1455,6 +2793,45 @@
             if (e.target === document.getElementById('resumeModal')) closeResume();
         }
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResume(); });
+
+        // Typing Animation
+        const words = ['Product Designer', 'Web Developer', 'UI/UX Expert', 'Frontend Engineer'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingText = document.getElementById('typingText');
+        const typeSpeed = 70;
+        const deleteSpeed = 50;
+        const delayBetweenWords = 2000;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let timeout = isDeleting ? deleteSpeed : typeSpeed;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                timeout = delayBetweenWords;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                timeout = 500;
+            }
+
+            setTimeout(type, timeout);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 500);
+        });
     </script>
 
 </body>
