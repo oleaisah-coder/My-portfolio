@@ -1,385 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isah David — Product Designer & Developer</title>
-    <meta name="description" content="Isah David — Product Designer and Web Developer. Building premium digital experiences with 3 years of design expertise.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Isah David — Product Designer and Web Developer. Building premium digital experiences with 3 years of design expertise.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="container">
-        <div class="nav-inner">
-            <div class="nav-logo">ISAH DAVID <span>PORTFOLIO</span></div>
-            <div class="nav-links">
-                <a href="#hero">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#work">Portfolio</a>
-                <a href="#journey">Experience</a>
-                <a href="#feedback">Feedback</a>
-                <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you" target="_blank" class="nav-cta">Hire Me</a>
-            </div>
-            <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu" onclick="document.getElementById('mobileMenu').classList.toggle('open'); this.classList.toggle('active')">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </div>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-    <a href="#hero" onclick="closeMobile()">Home</a>
-    <a href="#about" onclick="closeMobile()">About Me</a>
-    <a href="#work" onclick="closeMobile()">Portfolio</a>
-    <a href="#journey" onclick="closeMobile()">Experience</a>
-    <a href="#feedback" onclick="closeMobile()">Feedback</a>
-    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank" onclick="closeMobile()">Hire Me</a>
-</div>
-
-<!-- Hero -->
-<section class="hero" id="hero">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="hero-label">Available for Hire</div>
-                <h1 class="hero-name">Isah David</h1>
-                <div class="hero-title-line">
-                    <span class="hero-role" id="typingText"></span><span class="typing-cursor">|</span>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-inner">
+                <div class="nav-logo">ISAH DAVID <span>PORTFOLIO</span></div>
+                <div class="nav-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About Me</a>
+                    <a href="#work">Portfolio</a>
+                    <a href="#journey">Experience</a>
+                    <a href="#feedback">Feedback</a>
+                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you"
+                        target="_blank" class="nav-cta">Hire Me</a>
                 </div>
-                <p class="hero-desc">Building premium digital experiences with 3 years of design expertise and a high-performance development stack. I don't just envision digital products — I engineer them.</p>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you" class="btn-primary" target="_blank">
-                        Get In Touch
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu"
+                    onclick="document.getElementById('mobileMenu').classList.toggle('open'); this.classList.toggle('active')">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="closeMobile()">Home</a>
+        <a href="#about" onclick="closeMobile()">About Me</a>
+        <a href="#work" onclick="closeMobile()">Portfolio</a>
+        <a href="#journey" onclick="closeMobile()">Experience</a>
+        <a href="#feedback" onclick="closeMobile()">Feedback</a>
+        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank"
+            onclick="closeMobile()">Hire Me</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-label">Available for Hire</div>
+                    <h1 class="hero-name">Isah David</h1>
+                    <div class="hero-title-line">
+                        <span class="hero-role" id="typingText"></span><span class="typing-cursor">|</span>
+                    </div>
+                    <p class="hero-desc">Building premium digital experiences with 3 years of design expertise and a
+                        high-performance development stack. I don't just envision digital products — I engineer them.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you"
+                            class="btn-primary" target="_blank">
+                            Get In Touch
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </a>
+                        <button class="btn-outline" onclick="openResume()">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            View Resume
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3<span>+</span></div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15<span>+</span></div>
+                            <div class="stat-label">Completed Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10<span>+</span></div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="img/hero.png" alt="Isah David — Product Designer" class="hero-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Expertise -->
+    <section class="expertise" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-badge">Core Expertise</div>
+                <h2 class="section-title">What I Do Best</h2>
+                <p class="section-subtitle">I specialize in crafting premium interfaces and scalable systems that
+                    deliver real impact.</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card reveal">
+                    <div class="expertise-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting interfaces that balance aesthetic appeal with functional clarity. 3 years of building
+                        design systems and seamless flows with Figma, Adobe XD, and Photoshop.</p>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Building high-performance web applications using React.js, TypeScript, and Tailwind CSS. Focused
+                        on clean, scalable code and seamless responsiveness.</p>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-icon">🧩</div>
+                    <h3>Enterprise Products</h3>
+                    <p>Designing and developing complex, multi-portal ecosystems with modern backend tools like Supabase
+                        for real-time data and robust architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="work">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-badge">Selected Work</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of premium digital products I've designed and engineered.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-thumb-wrap">
+                        <img src="img/hrscreen.png" alt="HR Management Dashboard" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">UI/UX Design</div>
+                        <h3>HR Management Dashboard</h3>
+                        <p>A complete redesign of workforce management. Turning HR chaos into clarity through thoughtful
+                            information architecture.</p>
+                        <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1"
+                            target="_blank" class="portfolio-link">View Project <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-thumb-wrap">
+                        <img src="img/project_errandhub.png" alt="ErrandHub" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Full-Stack Development</div>
+                        <h3>ErrandHub — Multi-Portal Ecosystem</h3>
+                        <p>A comprehensive task management ecosystem with distinct portals for Users, Runners, and
+                            Administrators.</p>
+                        <a href="https://errandhub-v63n.vercel.app" target="_blank" class="portfolio-link">View Project
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-thumb-wrap">
+                        <img src="img/project_realestate.png" alt="Luxury Dwelling Estates" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">React · Supabase</div>
+                        <h3>Luxury Dwelling Estates</h3>
+                        <p>A sophisticated real estate platform redefining property discovery in Nigeria with advanced
+                            search and real-time data.</p>
+                        <a href="https://naijahome-hub.vercel.app" target="_blank" class="portfolio-link">View Project
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-thumb-wrap">
+                        <img src="img/project_himclothiers.png" alt="HimClothiers E-Commerce" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">E-Commerce Design</div>
+                        <h3>HimClothiers — Premium Menswear</h3>
+                        <p>A luxury fashion e-commerce experience designed for the modern Nigerian man with seamless
+                            shopping flows.</p>
+                        <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=0-1&t=HGjmpHZXDVJ1n2Sh-1"
+                            target="_blank" class="portfolio-link">View in Figma <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-thumb-wrap">
+                        <img src="img/project_goalio.png" alt="GOALIO Livescore App" class="portfolio-thumb">
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-category">Mobile App Design</div>
+                        <h3>GOALIO — Football Livescore</h3>
+                        <p>A real-time football livescore application for passionate fans demanding instant updates and
+                            deep statistics.</p>
+                        <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=2-2049&t=HGjmpHZXDVJ1n2Sh-1"
+                            target="_blank" class="portfolio-link">View in Figma <svg width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Journey -->
+    <section class="journey" id="journey">
+        <div class="container">
+            <div class="section-header reveal" style="text-align:left;margin-bottom:48px;">
+                <div class="section-badge">Professional Journey</div>
+                <h2 class="section-title">My Career Path</h2>
+                <p class="section-subtitle">A timeline of my growth from designer to full-stack product builder.</p>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-list">
+                    <div class="journey-item reveal">
+                        <div class="journey-dot"></div>
+                        <div>
+                            <div class="journey-year">2024 – Present</div>
+                            <div class="journey-role">Full-Stack Product Designer</div>
+                            <div class="journey-company">Freelance — React, TypeScript, Supabase</div>
+                        </div>
+                    </div>
+                    <div class="journey-item reveal">
+                        <div class="journey-dot"></div>
+                        <div>
+                            <div class="journey-year">2023 – 2024</div>
+                            <div class="journey-role">UI/UX Product Designer</div>
+                            <div class="journey-company">Freelance — Figma, Adobe XD</div>
+                        </div>
+                    </div>
+                    <div class="journey-item reveal">
+                        <div class="journey-dot"></div>
+                        <div>
+                            <div class="journey-year">2022 – 2023</div>
+                            <div class="journey-role">Junior UI Designer</div>
+                            <div class="journey-company">Self-taught — Design Fundamentals</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Feedback -->
+    <section class="testimonials" id="feedback">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-badge">Client Feedback</div>
+                <h2 class="section-title">What People Say</h2>
+                <p class="section-subtitle">Trusted by clients who value quality, speed, and premium design.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Isah delivered an exceptional product that exceeded our expectations.
+                        His attention to detail and design sensibility is remarkable."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">IJ</div>
+                        <div>
+                            <div class="testimonial-name">Isah Jonathan</div>
+                            <div class="testimonial-role">CEO, HIMCLOTHIERS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Working with Isah was a game-changer. He turned our complex
+                        requirements into a clean, intuitive interface that our users love."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RA</div>
+                        <div>
+                            <div class="testimonial-name">Mr Richmond Asare</div>
+                            <div class="testimonial-role">CEO Gyden</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Exceptional quality and fast turnaround. Isah understands both design
+                        and development, making collaboration incredibly smooth."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RM</div>
+                        <div>
+                            <div class="testimonial-name">Royal Macaulay</div>
+                            <div class="testimonial-role">Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-grid">
+                <div class="reveal">
+                    <h2 class="cta-title">Let's build something <em>extraordinary</em></h2>
+                    <p class="cta-desc">Have a project in mind? I'm currently accepting new clients for Q2 2026. Whether
+                        you need a full product design, a design system, or just want to explore an idea — I'd love to
+                        hear about it.</p>
+                    <div class="cta-socials">
+                        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank"
+                            class="cta-social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <a href="https://www.behance.net/isaholea" target="_blank" class="cta-social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7.803 5.731c.589 0 1.119.051 1.605.155.483.103.895.273 1.243.508.343.235.611.547.803.939.187.387.28.871.28 1.443 0 .62-.14 1.137-.421 1.551-.283.415-.7.753-1.255 1.015.757.219 1.318.602 1.69 1.146.374.549.557 1.205.557 1.976 0 .625-.119 1.166-.358 1.622-.238.457-.561.832-.967 1.132-.406.295-.87.514-1.388.653-.52.141-1.051.21-1.595.21H2V5.731h5.803z" />
+                            </svg>
+                            Behance
+                        </a>
+                        <a href="https://x.com/IsahOlea" target="_blank" class="cta-social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                            X (Twitter)
+                        </a>
+                        <a href="https://www.instagram.com/isahdavid6" target="_blank" class="cta-social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal"
+                    onsubmit="event.preventDefault(); alert('Message sent! I\'ll get back to you soon.');">
+                    <div class="form-row">
+                        <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required>
+                        </div>
+                        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group"><label>Email Address</label><input type="email"
+                            placeholder="john@example.com" required></div>
+                    <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project..."
+                            required></textarea></div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-copy">© 2026 Isah David. All rights reserved.</div>
+                <div class="footer-links">
+                    <a href="https://wa.me/2349012949580" target="_blank">WhatsApp</a>
+                    <a href="https://www.behance.net/isaholea" target="_blank">Behance</a>
+                    <a href="https://x.com/IsahOlea" target="_blank">X (Twitter)</a>
+                    <a href="https://www.instagram.com/isahdavid6" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal-overlay" id="resumeModal" onclick="handleOverlayClick(event)">
+        <div class="resume-modal">
+            <div class="resume-modal-header">
+                <div class="resume-modal-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Isah David — Resume
+                </div>
+                <div class="resume-modal-actions">
+                    <a href="img/resume.pdf" download="Isah_David_Resume.pdf" class="resume-download">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download
                     </a>
-                    <button class="btn-outline" onclick="openResume()">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                        View Resume
-                    </button>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item"><div class="stat-number">3<span>+</span></div><div class="stat-label">Years Experience</div></div>
-                    <div class="stat-item"><div class="stat-number">15<span>+</span></div><div class="stat-label">Completed Projects</div></div>
-                    <div class="stat-item"><div class="stat-number">10<span>+</span></div><div class="stat-label">Happy Clients</div></div>
+                    <button class="resume-close" onclick="closeResume()" aria-label="Close">&times;</button>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="img/hero.png" alt="Isah David — Product Designer" class="hero-photo">
+            <div class="resume-modal-body">
+                <iframe src="img/resume.pdf" title="Isah David Resume"></iframe>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Core Expertise -->
-<section class="expertise" id="about">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-badge">Core Expertise</div>
-            <h2 class="section-title">What I Do Best</h2>
-            <p class="section-subtitle">I specialize in crafting premium interfaces and scalable systems that deliver real impact.</p>
-        </div>
-        <div class="expertise-grid">
-            <div class="expertise-card reveal">
-                <div class="expertise-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>Crafting interfaces that balance aesthetic appeal with functional clarity. 3 years of building design systems and seamless flows with Figma, Adobe XD, and Photoshop.</p>
-            </div>
-            <div class="expertise-card reveal">
-                <div class="expertise-icon">💻</div>
-                <h3>Web Development</h3>
-                <p>Building high-performance web applications using React.js, TypeScript, and Tailwind CSS. Focused on clean, scalable code and seamless responsiveness.</p>
-            </div>
-            <div class="expertise-card reveal">
-                <div class="expertise-icon">🧩</div>
-                <h3>Enterprise Products</h3>
-                <p>Designing and developing complex, multi-portal ecosystems with modern backend tools like Supabase for real-time data and robust architecture.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio -->
-<section class="portfolio" id="work">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-badge">Selected Work</div>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">A showcase of premium digital products I've designed and engineered.</p>
-        </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-card reveal">
-                <div class="portfolio-thumb-wrap">
-                    <img src="img/hrscreen.png" alt="HR Management Dashboard" class="portfolio-thumb">
-                </div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">UI/UX Design</div>
-                    <h3>HR Management Dashboard</h3>
-                    <p>A complete redesign of workforce management. Turning HR chaos into clarity through thoughtful information architecture.</p>
-                    <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1" target="_blank" class="portfolio-link">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                </div>
-            </div>
-            <div class="portfolio-card reveal">
-                <div class="portfolio-thumb-wrap">
-                    <img src="img/project_errandhub.png" alt="ErrandHub" class="portfolio-thumb">
-                </div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Full-Stack Development</div>
-                    <h3>ErrandHub — Multi-Portal Ecosystem</h3>
-                    <p>A comprehensive task management ecosystem with distinct portals for Users, Runners, and Administrators.</p>
-                    <a href="https://errandhub-v63n.vercel.app" target="_blank" class="portfolio-link">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                </div>
-            </div>
-            <div class="portfolio-card reveal">
-                <div class="portfolio-thumb-wrap">
-                    <img src="img/project_realestate.png" alt="Luxury Dwelling Estates" class="portfolio-thumb">
-                </div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">React · Supabase</div>
-                    <h3>Luxury Dwelling Estates</h3>
-                    <p>A sophisticated real estate platform redefining property discovery in Nigeria with advanced search and real-time data.</p>
-                    <a href="https://naijahome-hub.vercel.app" target="_blank" class="portfolio-link">View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                </div>
-            </div>
-            <div class="portfolio-card reveal">
-                <div class="portfolio-thumb-wrap">
-                    <img src="img/project_himclothiers.png" alt="HimClothiers E-Commerce" class="portfolio-thumb">
-                </div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">E-Commerce Design</div>
-                    <h3>HimClothiers — Premium Menswear</h3>
-                    <p>A luxury fashion e-commerce experience designed for the modern Nigerian man with seamless shopping flows.</p>
-                    <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=0-1&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="portfolio-link">View in Figma <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                </div>
-            </div>
-            <div class="portfolio-card reveal">
-                <div class="portfolio-thumb-wrap">
-                    <img src="img/project_goalio.png" alt="GOALIO Livescore App" class="portfolio-thumb">
-                </div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Mobile App Design</div>
-                    <h3>GOALIO — Football Livescore</h3>
-                    <p>A real-time football livescore application for passionate fans demanding instant updates and deep statistics.</p>
-                    <a href="https://www.figma.com/design/2u8DcZrhHX1i4oAWYDsjXA/Him.clothiers?node-id=2-2049&t=HGjmpHZXDVJ1n2Sh-1" target="_blank" class="portfolio-link">View in Figma <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Professional Journey -->
-<section class="journey" id="journey">
-    <div class="container">
-        <div class="section-header reveal" style="text-align:left;margin-bottom:48px;">
-            <div class="section-badge">Professional Journey</div>
-            <h2 class="section-title">My Career Path</h2>
-            <p class="section-subtitle">A timeline of my growth from designer to full-stack product builder.</p>
-        </div>
-        <div class="journey-grid">
-            <div class="journey-list">
-                <div class="journey-item reveal">
-                    <div class="journey-dot"></div>
-                    <div>
-                        <div class="journey-year">2024 – Present</div>
-                        <div class="journey-role">Full-Stack Product Designer</div>
-                        <div class="journey-company">Freelance — React, TypeScript, Supabase</div>
-                    </div>
-                </div>
-                <div class="journey-item reveal">
-                    <div class="journey-dot"></div>
-                    <div>
-                        <div class="journey-year">2023 – 2024</div>
-                        <div class="journey-role">UI/UX Product Designer</div>
-                        <div class="journey-company">Freelance — Figma, Adobe XD</div>
-                    </div>
-                </div>
-                <div class="journey-item reveal">
-                    <div class="journey-dot"></div>
-                    <div>
-                        <div class="journey-year">2022 – 2023</div>
-                        <div class="journey-role">Junior UI Designer</div>
-                        <div class="journey-company">Self-taught — Design Fundamentals</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Client Feedback -->
-<section class="testimonials" id="feedback">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-badge">Client Feedback</div>
-            <h2 class="section-title">What People Say</h2>
-            <p class="section-subtitle">Trusted by clients who value quality, speed, and premium design.</p>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Isah delivered an exceptional product that exceeded our expectations. His attention to detail and design sensibility is remarkable."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">IJ</div>
-                    <div>
-                        <div class="testimonial-name">Isah Jonathan</div>
-                        <div class="testimonial-role">CEO, HIMCLOTHIERS</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Working with Isah was a game-changer. He turned our complex requirements into a clean, intuitive interface that our users love."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">FK</div>
-                    <div>
-                        <div class="testimonial-name">Fatima Khalid</div>
-                        <div class="testimonial-role">Product Manager</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card reveal">
-                <div class="testimonial-stars">★★★★★</div>
-                <p class="testimonial-text">"Exceptional quality and fast turnaround. Isah understands both design and development, making collaboration incredibly smooth."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">JM</div>
-                    <div>
-                        <div class="testimonial-name">James Mitchell</div>
-                        <div class="testimonial-role">Founder, ErrandHub</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA / Contact -->
-<section class="cta-section" id="contact">
-    <div class="container">
-        <div class="cta-grid">
-            <div class="reveal">
-                <h2 class="cta-title">Let's build something <em>extraordinary</em></h2>
-                <p class="cta-desc">Have a project in mind? I'm currently accepting new clients for Q2 2026. Whether you need a full product design, a design system, or just want to explore an idea — I'd love to hear about it.</p>
-                <div class="cta-socials">
-                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank" class="cta-social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        WhatsApp
-                    </a>
-                    <a href="https://www.behance.net/isaholea" target="_blank" class="cta-social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.803 5.731c.589 0 1.119.051 1.605.155.483.103.895.273 1.243.508.343.235.611.547.803.939.187.387.28.871.28 1.443 0 .62-.14 1.137-.421 1.551-.283.415-.7.753-1.255 1.015.757.219 1.318.602 1.69 1.146.374.549.557 1.205.557 1.976 0 .625-.119 1.166-.358 1.622-.238.457-.561.832-.967 1.132-.406.295-.87.514-1.388.653-.52.141-1.051.21-1.595.21H2V5.731h5.803z"/></svg>
-                        Behance
-                    </a>
-                    <a href="https://x.com/IsahOlea" target="_blank" class="cta-social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        X (Twitter)
-                    </a>
-                    <a href="https://www.instagram.com/isahdavid6" target="_blank" class="cta-social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        Instagram
-                    </a>
-                </div>
-            </div>
-            <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Message sent! I\'ll get back to you soon.');">
-                <div class="form-row">
-                    <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required></div>
-                    <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required></div>
-                </div>
-                <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com" required></div>
-                <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project..." required></textarea></div>
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-inner">
-            <div class="footer-copy">© 2026 Isah David. All rights reserved.</div>
-            <div class="footer-links">
-                <a href="https://wa.me/2349012949580" target="_blank">WhatsApp</a>
-                <a href="https://www.behance.net/isaholea" target="_blank">Behance</a>
-                <a href="https://x.com/IsahOlea" target="_blank">X (Twitter)</a>
-                <a href="https://www.instagram.com/isahdavid6" target="_blank">Instagram</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Resume Modal -->
-<div class="resume-modal-overlay" id="resumeModal" onclick="handleOverlayClick(event)">
-    <div class="resume-modal">
-        <div class="resume-modal-header">
-            <div class="resume-modal-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                Isah David — Resume
-            </div>
-            <div class="resume-modal-actions">
-                <a href="img/resume.pdf" download="Isah_David_Resume.pdf" class="resume-download">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download
-                </a>
-                <button class="resume-close" onclick="closeResume()" aria-label="Close">&times;</button>
-            </div>
-        </div>
-        <div class="resume-modal-body">
-            <iframe src="img/resume.pdf" title="Isah David Resume"></iframe>
-        </div>
-    </div>
-</div>
-
-<script>
-// Mobile menu
-function closeMobile() {
-    document.getElementById('mobileMenu').classList.remove('open');
-    document.getElementById('menuBtn').classList.remove('active');
-}
-
-// Resume modal
-function openResume() {
-    document.getElementById('resumeModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-function closeResume() {
-    document.getElementById('resumeModal').classList.remove('open');
-    document.body.style.overflow = '';
-}
-function handleOverlayClick(e) {
-    if (e.target === document.getElementById('resumeModal')) closeResume();
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResume(); });
-
-// Typing animation
-const words = ['Product Designer', 'Web Developer', 'UI/UX Expert', 'Frontend Engineer'];
-let wordIndex = 0, charIndex = 0, isDeleting = false;
-const typingEl = document.getElementById('typingText');
-
-function type() {
-    const word = words[wordIndex];
-    typingEl.textContent = isDeleting ? word.substring(0, charIndex - 1) : word.substring(0, charIndex + 1);
-    isDeleting ? charIndex-- : charIndex++;
-
-    let timeout = isDeleting ? 50 : 70;
-    if (!isDeleting && charIndex === word.length) { timeout = 2000; isDeleting = true; }
-    else if (isDeleting && charIndex === 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; timeout = 500; }
-    setTimeout(type, timeout);
-}
-setTimeout(type, 500);
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+    <script>
+        // Mobile menu
+        function closeMobile() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuBtn').classList.remove('active');
         }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+        // Resume modal
+        function openResume() {
+            document.getElementById('resumeModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeResume() {
+            document.getElementById('resumeModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function handleOverlayClick(e) {
+            if (e.target === document.getElementById('resumeModal')) closeResume();
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResume(); });
+
+        // Typing animation
+        const words = ['Product Designer', 'Web Developer', 'UI/UX Expert', 'Frontend Engineer'];
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
+        const typingEl = document.getElementById('typingText');
+
+        function type() {
+            const word = words[wordIndex];
+            typingEl.textContent = isDeleting ? word.substring(0, charIndex - 1) : word.substring(0, charIndex + 1);
+            isDeleting ? charIndex-- : charIndex++;
+
+            let timeout = isDeleting ? 50 : 70;
+            if (!isDeleting && charIndex === word.length) { timeout = 2000; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; timeout = 500; }
+            setTimeout(type, timeout);
+        }
+        setTimeout(type, 500);
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 
 </body>
+
 </html>
