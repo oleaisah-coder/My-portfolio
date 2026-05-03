@@ -354,17 +354,16 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal"
-                    onsubmit="event.preventDefault(); alert('Message sent! I\'ll get back to you soon.');">
+                <form class="contact-form reveal" onsubmit="sendWhatsApp(event)">
                     <div class="form-row">
-                        <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required>
+                        <div class="form-group"><label>First Name</label><input type="text" id="firstName" placeholder="John" required>
                         </div>
-                        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required>
+                        <div class="form-group"><label>Last Name</label><input type="text" id="lastName" placeholder="Doe" required>
                         </div>
                     </div>
-                    <div class="form-group"><label>Email Address</label><input type="email"
+                    <div class="form-group"><label>Email Address</label><input type="email" id="email"
                             placeholder="john@example.com" required></div>
-                    <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project..."
+                    <div class="form-group"><label>Message</label><textarea id="message" placeholder="Tell me about your project..."
                             required></textarea></div>
                     <button type="submit" class="btn-submit">Send Message</button>
                 </form>
@@ -466,6 +465,29 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // WhatsApp Form Submission
+        function sendWhatsApp(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!firstName || !lastName || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const phoneNumber = "2349012949580";
+            const fullMessage = `Hello, my name is ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`;
+            
+            const encodedMessage = encodeURIComponent(fullMessage);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
     </script>
 
 </body>
