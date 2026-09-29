@@ -1064,7 +1064,7 @@ ul { list-style: none; }
 
 .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
 }
 
@@ -1627,6 +1627,7 @@ ul { list-style: none; }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+    .certifications-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-name { font-size: 44px; }
 }
 
