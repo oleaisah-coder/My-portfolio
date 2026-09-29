@@ -507,7 +507,8 @@
                                 <span class="ptag social-tag">Facebook</span>
                                 <span class="ptag social-tag">Tiktok</span>
                             </div>
-                            <a href="#" class="portfolio-link" onclick="openGallery(vol1Images); return false;">View
+                            <a href="#" class="portfolio-link"
+                                onclick="openGallery(vol1Images, vol1Alts); return false;">View
                                 Project
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
@@ -541,7 +542,8 @@
                                 <span class="ptag social-tag">Facebook</span>
                                 <span class="ptag social-tag">Tiktok</span>
                             </div>
-                            <a href="#" class="portfolio-link" onclick="openGallery(vol2Images); return false;">View
+                            <a href="#" class="portfolio-link"
+                                onclick="openGallery(vol2Images, vol2Alts); return false;">View
                                 Project
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
@@ -694,8 +696,8 @@
                         <div class="cert-year">2025</div>
                         <h3 class="cert-title">UI/UX Design Certificate</h3>
                         <div class="cert-issuer">Dev and Design</div>
-                        <a href="img/Dev%20and%20design%20certifcate%20On%20UIUX%20Design.jpeg" target="_blank"
-                            class="cert-btn">
+                        <a href="#" class="cert-btn"
+                            onclick="openGallery(cert1Images, cert1Alts); return false;">
                             View Certificate
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -716,8 +718,8 @@
                         <div class="cert-year">2026</div>
                         <h3 class="cert-title">Brand Design Certificate</h3>
                         <div class="cert-issuer">Techyjaunt</div>
-                        <a href="img/Techyjaunt%20Certificate%20on%20Brand%20Design.jpeg" target="_blank"
-                            class="cert-btn">
+                        <a href="#" class="cert-btn"
+                            onclick="openGallery(cert2Images, cert2Alts); return false;">
                             View Certificate
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -738,8 +740,8 @@
                         <div class="cert-year">2026</div>
                         <h3 class="cert-title">UI/UX Design Internship</h3>
                         <div class="cert-issuer">Gyden</div>
-                        <a href="img/Internship%20Gyden%20Certificate.pdf" target="_blank"
-                            class="cert-btn">
+                        <a href="#" class="cert-btn"
+                            onclick="openGallery(cert3Images, cert3Alts); return false;">
                             View Certificate
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -1012,16 +1014,57 @@
             'img/Social media designs/Social media vol 2/WhatsApp Image 2026-09-24 at 09.24.41.jpeg'
         ];
 
+        const cert1Images = [
+            'img/Dev and design certifcate On UIUX Design.jpeg'
+        ];
+        const cert1Alts = [
+            'UI/UX Design certificate from Dev and Design, 2025'
+        ];
+
+        const cert2Images = [
+            'img/Techyjaunt Certificate on Brand Design.jpeg'
+        ];
+        const cert2Alts = [
+            'Brand Design certificate from Techyjaunt, 2026'
+        ];
+
+        const cert3Images = [
+            'img/Internship Gyden Certificate.jpg'
+        ];
+        const cert3Alts = [
+            'UI/UX Design Internship completion certificate from Gyden'
+        ];
+
+        const vol1Alts = [
+            'Brand design social media graphic 1',
+            'Brand design social media graphic 2',
+            'Brand design social media graphic 3',
+            'Brand design social media graphic 4',
+            'Brand design social media graphic 5'
+        ];
+        const vol2Alts = [
+            'Brand design social media graphic 1',
+            'Brand design social media graphic 2'
+        ];
+
         const galleryEl = document.getElementById('galleryModal');
         const galleryImg = document.getElementById('galleryImage');
         const galleryCount = document.getElementById('galleryCount');
+        const galleryPrev = galleryEl.querySelector('.gallery-prev');
+        const galleryNext = galleryEl.querySelector('.gallery-next');
         let galleryList = [];
+        let galleryAlts = [];
         let galleryIndex = 0;
 
-        function openGallery(images) {
+        function openGallery(images, alts) {
             galleryList = images;
+            galleryAlts = alts || images.map((_, i) => `Image ${i + 1}`);
             galleryIndex = 0;
             renderGallery();
+            const single = galleryList.length < 2;
+            galleryPrev.style.display = single ? 'none' : '';
+            galleryNext.style.display = single ? 'none' : '';
+            galleryCount.style.display = single ? 'none' : '';
             galleryEl.classList.add('open');
             document.body.style.overflow = 'hidden';
         }
@@ -1038,7 +1081,7 @@
 
         function renderGallery() {
             galleryImg.src = galleryList[galleryIndex];
-            galleryImg.alt = `Social media graphic ${galleryIndex + 1}`;
+            galleryImg.alt = galleryAlts[galleryIndex] || '';
             galleryCount.textContent = `${galleryIndex + 1} / ${galleryList.length}`;
         }
 
