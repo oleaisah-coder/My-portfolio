@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isah David — Product Designer & Developer</title>
+    <title>Isah David — Product Designer & Full-Stack Builder</title>
     <meta name="description"
-        content="Isah David — Product Designer and Web Developer. Building premium digital experiences with 3 years of design expertise.">
+        content="Isah David — Product Designer and Web Developer. Building premium digital experiences with 3+ years of design expertise and modern full-stack development.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Vercel Analytics -->
@@ -21,918 +27,1284 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-inner">
-                <div class="nav-logo">ISAH DAVID <span>PORTFOLIO</span></div>
-                <div class="nav-links">
-                    <a href="#hero">Home</a>
-                    <a href="#about">About Me</a>
-                    <a href="#work">Portfolio</a>
-                    <a href="#journey">Experience</a>
-                    <a href="#certifications">Certificates</a>
-                    <a href="#feedback">Feedback</a>
-                    <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you"
-                        target="_blank" class="nav-cta">Hire Me</a>
-                </div>
-                <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu"
-                    onclick="document.getElementById('mobileMenu').classList.toggle('open'); this.classList.toggle('active')">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Outer Site Canvas Wrapper (Framed Soft Lavender Aesthetic) -->
+    <div class="site-canvas">
+        <main class="site-frame">
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#hero" onclick="closeMobile()">Home</a>
-        <a href="#about" onclick="closeMobile()">About Me</a>
-        <a href="#work" onclick="closeMobile()">Portfolio</a>
-        <a href="#journey" onclick="closeMobile()">Experience</a>
-        <a href="#certifications" onclick="closeMobile()">Certificates</a>
-        <a href="#feedback" onclick="closeMobile()">Feedback</a>
-        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank"
-            onclick="closeMobile()">Hire Me</a>
-    </div>
-
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-label">Available for Hire</div>
-                    <h1 class="hero-name">Isah David</h1>
-                    <div class="hero-title-line">
-                        <span class="hero-role" id="typingText"></span><span class="typing-cursor">|</span>
-                    </div>
-                    <p class="hero-desc">Building premium digital experiences with 3 years of design expertise and a
-                        high-performance development stack. I don't just envision digital products — I engineer them.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you"
-                            class="btn-primary" target="_blank">
-                            Get In Touch
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" />
-                            </svg>
+            <!-- Navigation Bar -->
+            <nav class="navbar" id="navbar">
+                <div class="container">
+                    <div class="nav-inner">
+                        <!-- Brand / Logo -->
+                        <a href="#hero" class="nav-brand">
+                            <span class="nav-brand-name">ISAH DAVID</span>
                         </a>
-                        <button class="btn-outline" onclick="openResume()">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                <polyline points="14 2 14 8 20 8" />
-                            </svg>
-                            View Resume
+
+                        <!-- Nav Links -->
+                        <div class="nav-links">
+                            <a href="#about">About</a>
+                            <a href="#services">Services</a>
+                            <a href="#work">Selected Work</a>
+                            <a href="#journey">Experience</a>
+                            <a href="#feedback">Feedback</a>
+                            <a href="#faq">FAQ</a>
+                            <a href="#certifications">Certificates</a>
+                        </div>
+
+                        <!-- CTA / Let's Talk -->
+                        <div class="nav-actions">
+                            <a href="https://wa.me/2349012949580?text=Hi%20David,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20work%20with%20you"
+                                target="_blank" class="nav-cta">
+                                <span>Let's Talk</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Mobile Hamburger Button -->
+                        <button class="nav-hamburger" id="menuBtn" aria-label="Toggle Navigation Menu"
+                            onclick="document.getElementById('mobileMenu').classList.toggle('open'); this.classList.toggle('active')">
+                            <span></span><span></span><span></span>
                         </button>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">4<span>+</span></div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15<span>+</span></div>
-                            <div class="stat-label">Completed Projects</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10<span>+</span></div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                    </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <img src="img/hero.png" alt="Isah David — Product Designer" class="hero-photo">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Core Expertise -->
-    <section class="expertise" id="about">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-badge">Core Expertise</div>
-                <h2 class="section-title">What I Do Best</h2>
-                <p class="section-subtitle">I specialize in crafting premium interfaces and scalable systems that
-                    deliver real impact.</p>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-card reveal">
-                    <div class="expertise-card-header">
-                        <span class="expertise-number">01</span>
-                        <div class="expertise-indicator">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="expertise-visual-wrap">
-                        <div class="expertise-abstract ui-abstract">
-                            <div class="abs-header"></div>
-                            <div class="abs-body">
-                                <div class="abs-box"></div>
-                                <div class="abs-lines">
-                                    <div class="abs-line"></div>
-                                    <div class="abs-line short"></div>
-                                </div>
+                <!-- Mobile Dropdown Menu -->
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#hero" onclick="closeMobile()">Home</a>
+                    <a href="#about" onclick="closeMobile()">About Me</a>
+                    <a href="#services" onclick="closeMobile()">Services</a>
+                    <a href="#work" onclick="closeMobile()">Selected Work</a>
+                    <a href="#journey" onclick="closeMobile()">Experience</a>
+                    <a href="#feedback" onclick="closeMobile()">Feedback</a>
+                    <a href="#faq" onclick="closeMobile()">FAQ</a>
+                    <a href="#certifications" onclick="closeMobile()">Certificates</a>
+                    <a href="https://wa.me/2349012949580?text=Hi%20David,%20I%20saw%20your%20portfolio" target="_blank"
+                        onclick="closeMobile()" class="mobile-cta">Hire Me</a>
+                </div>
+            </nav>
+
+            <!-- Hero Section (Exact Match to Design Reference) -->
+            <section class="hero-section" id="hero">
+                <!-- Large Decorative Watermark Typography behind arch -->
+                <div class="hero-watermark">DESIGNER</div>
+
+                <div class="container hero-container">
+                    <!-- Centered Arch & Portrait -->
+                    <div class="hero-center-stage">
+                        <div class="hero-arch-wrap">
+                            <!-- Blue Gradient Arch -->
+                            <div class="hero-arch-backdrop"></div>
+
+                            <!-- Isah David's Cutout Image without background -->
+                            <img src="img/hero-nobg.png" alt="Isah David — Product Designer & Full-Stack Builder"
+                                class="hero-portrait">
+
+                            <!-- Floating Badge 1 (Left): Web design -->
+                            <div class="hero-float-pill pill-left-angled">
+                                <span>Web design</span>
+                            </div>
+
+                            <!-- Floating Badge 2 (Right): Web development -->
+                            <div class="hero-float-pill pill-right-angled">
+                                <span>Web development</span>
                             </div>
                         </div>
-                        <div class="expertise-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    </div>
+
+                    <!-- Overlay Bottom Row: Headline Left, Floating Stat Cards Right -->
+                    <div class="hero-bottom-stage">
+                        <div class="hero-headline-block reveal">
+                            <div class="hero-intro-label">Hey, I'm Isah David.</div>
+                            <h1 class="hero-main-title">Product, UI/UX &amp;<br>Brand Design</h1>
+                            <div class="hero-role-typing">
+                                <span id="typingText">Product Designer</span><span class="typing-cursor">|</span>
+                            </div>
+                            <div class="hero-actions hero-actions-inline">
+                                <a href="#work" class="btn-pill-dark">
+                                    <span>Selected Work</span>
+                                    <span class="btn-arrow-circle">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <button class="btn-pill-light" onclick="openResume()">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                    </svg>
+                                    <span>View Resume</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="hero-stats-block reveal">
+                            <!-- Stat Card 1 -->
+                            <div class="hero-floating-stat-card card-top">
+                                <div class="stat-card-text">
+                                    Years Crafting<br>Digital Products
+                                </div>
+                                <div class="stat-card-number">4+</div>
+                            </div>
+
+                            <!-- Stat Card 2 -->
+                            <div class="hero-floating-stat-card card-bottom">
+                                <div class="stat-card-text">
+                                    Successful Client<br>Partnerships
+                                </div>
+                                <div class="stat-card-number">15+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me / Introduction Section (Exact Reference Layout) -->
+            <section class="about-section" id="about">
+                <div class="container">
+                    <!-- Top Row: Sparkle Badge on Left, Headline + Button on Right -->
+                    <div class="about-top-row reveal">
+                        <div class="about-spark-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span>About Me</span>
+                        </div>
+                        <div class="about-heading-box">
+                            <h2 class="about-exact-title">
+                                I create thoughtful digital experiences that connect strategy, usability, and visual
+                                clarity.
+                            </h2>
+                            <div class="about-btn-wrap">
+                                <a href="https://wa.me/2349012949580?text=Hi%20David,%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20work%20with%20you"
+                                    target="_blank" class="btn-pill-dark">
+                                    <span>Get In Touch</span>
+                                    <span class="btn-arrow-circle">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Row: Portrait Cutout on Left, 2x2 Bento on Right -->
+                    <div class="about-main-row reveal">
+                        <!-- Left: Portrait Cutout with Bottom Dissolve -->
+                        <div class="about-portrait-col">
+                            <img src="img/hero-transparent.png" alt="Isah David — Product Designer"
+                                class="about-portrait-cutout">
+                        </div>
+
+                        <!-- Right: 2x2 Clean Cards Grid -->
+                        <div class="about-cards-col">
+                            <div class="about-bento-grid">
+
+                                <!-- Card 1 (Top-Left): Years Crafting Digital Products -->
+                                <div class="about-stat-box">
+                                    <div class="about-stat-text">Years Crafting<br>Digital Products</div>
+                                    <div class="about-stat-val">4+</div>
+                                </div>
+
+                                <!-- Card 2 (Top-Right): Successful Client Partnerships -->
+                                <div class="about-stat-box">
+                                    <div class="about-stat-text">Successful Client<br>Partnerships</div>
+                                    <div class="about-stat-val">15+</div>
+                                </div>
+
+                                <!-- Card 3 (Bottom-Left): Satisfaction Score + Avatars -->
+                                <div class="about-satisfaction-box">
+                                    <div class="sat-top-content">
+                                        <div class="sat-huge-val">120+</div>
+                                        <div class="sat-sub-text">Client Satisfaction Score</div>
+                                    </div>
+                                    <div class="sat-bottom-row">
+                                        <div class="sat-rating-badge">
+                                            <span class="sat-star-icon">★</span>
+                                            <span class="sat-score-num">4.8</span>
+                                        </div>
+                                        <div class="sat-avatars-group">
+                                            <span class="sat-avatar-dot a1">IJ</span>
+                                            <span class="sat-avatar-dot a2">RA</span>
+                                            <span class="sat-avatar-dot a3">AB</span>
+                                            <span class="sat-avatar-dot a4">RM</span>
+                                            <span class="sat-avatar-dot a5">+6</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 (Bottom-Right): Strategic Thinking + Skill Pills + Diagonal Branding Badge -->
+                                <div class="about-capabilities-box">
+                                    <h3 class="cap-heading">Strategic Thinking,<br>Clean Execution</h3>
+                                    <div class="cap-footer">
+                                        <div class="cap-pills-stack">
+                                            <span class="cap-skill-pill">Interface Design</span>
+                                            <span class="cap-skill-pill">Product Strategy</span>
+                                            <span class="cap-skill-pill">No code development</span>
+                                        </div>
+                                        <div class="cap-diagonal-wrapper">
+                                            <div class="cap-diagonal-badge">Branding</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects That Delivered Real Impact (Exact Reference Slider Layout) -->
+            <section class="work-section" id="work">
+                <div class="container">
+                    <!-- Section Header Matching Reference Image -->
+                    <div class="projects-header reveal">
+                        <div class="projects-spark-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span>My Portfolio</span>
+                        </div>
+                        <h2 class="projects-headline">
+                            Projects That Delivered<br>Real Impact
+                        </h2>
+                    </div>
+
+                    <!-- Slider Container (Sliding Animation from Left to Right) -->
+                    <div class="projects-slider-wrap reveal" id="projectSliderContainer">
+                        <div class="projects-slider-track" id="projectSliderTrack">
+
+                            <!-- Slide 01: Carelyra -->
+                            <div class="project-slide-card" data-index="1">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">Carelyra Healthcare App</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A comprehensive healthcare accessibility application focusing on
+                                            user-centric flows, inclusive interfaces, and empathetic design systems
+                                            tailored for rapid medical support.
+                                        </p>
+                                        <a href="https://www.behance.net/gallery/252932009/Carelyra-Health-care-App"
+                                            target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">01</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Carelyracoverpage.png" alt="Carelyra Healthcare App">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 02: HimClothiers -->
+                            <div class="project-slide-card" data-index="2">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">HimClothiers Luxury Store</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A luxury fashion e-commerce experience designed and engineered for the
+                                            modern man, featuring real-time product filtering, cart management, and
+                                            seamless payments.
+                                        </p>
+                                        <a href="https://him-clothiers-new.vercel.app/" target="_blank"
+                                            class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">02</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Himcover.png" alt="HimClothiers Menswear Store">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 03: WorkHarbour -->
+                            <div class="project-slide-card" data-index="3">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">WorkHarbour HR Dashboard</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A complete workforce management dashboard converting operational HR
+                                            complexity into visual clarity with information architecture, employee
+                                            metrics, and analytics.
+                                        </p>
+                                        <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1"
+                                            target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">03</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/hrscreen.png" alt="WorkHarbour HR Management Dashboard">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 04: ErrandHub -->
+                            <div class="project-slide-card" data-index="4">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">ErrandHub Multi-Portal</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A comprehensive task dispatch platform with dedicated portals for Users,
+                                            Field Runners, and Administrators built with real-time Supabase
+                                            subscriptions.
+                                        </p>
+                                        <a href="https://errandhub.vercel.app" target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">04</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Errandhubcover.png" alt="ErrandHub Multi-Portal System">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 05: Balisrelis Property -->
+                            <div class="project-slide-card" data-index="5">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">Balisrelis Property Limited</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A clean commercial web platform designed and developed for a premier real
+                                            estate agency, featuring intuitive property showcases and streamlined client
+                                            inquiries.
+                                        </p>
+                                        <a href="https://balisrelis.com" target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">05</div>
+                                    <div class="slide-img-box"
+                                        style="background:#FFFFFF;display:flex;align-items:center;justify-content:center;padding:24px;">
+                                        <img src="img/Belisrelis logo with text.png"
+                                            alt="Balisrelis Property Limited Website"
+                                            style="max-height:220px;object-fit:contain;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 06: Himclothiers Brand Style Guide -->
+                            <div class="project-slide-card" data-index="6">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">Himclothiers Brand Style Guide</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A complete brand identity system and style guide establishing visual
+                                            consistency, logo anatomy, color palettes, and typography for a luxury
+                                            menswear label.
+                                        </p>
+                                        <a href="img/Himclothiers Brand Guideline.pdf" target="_blank"
+                                            class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">06</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Himclotheirs cover page.png" alt="Himclothiers Brand Style Guide">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 07: Safe Nest Brand Identity -->
+                            <div class="project-slide-card" data-index="7">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">Safe Nest Brand Identity</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A strategic visual identity for a modern real estate and home security
+                                            brand, constructed around core values of trust, warmth, and contemporary
+                                            aesthetics.
+                                        </p>
+                                        <a href="img/Safe nest.pdf" target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">07</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Safenestt.png" alt="Safe Nest Brand Identity">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 08: Harvest Safe -->
+                            <div class="project-slide-card" data-index="8">
+                                <div class="slide-left-col">
+                                    <h3 class="slide-project-title">Harvest Safe Sustainable Brand</h3>
+                                    <div class="slide-left-bottom">
+                                        <p class="slide-project-desc">
+                                            A strategic brand identity centered on agricultural safety and ecological
+                                            sustainability — harmonizing organic earth tones with clean modern
+                                            typography.
+                                        </p>
+                                        <a href="img/Harvest safe.pdf" target="_blank" class="btn-pill-dark">
+                                            <span>Explore Project</span>
+                                            <span class="btn-arrow-circle">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2.5">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="slide-right-col">
+                                    <div class="slide-big-index">08</div>
+                                    <div class="slide-img-box">
+                                        <img src="img/Cover page.png" alt="Harvest Safe Brand Identity">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls / Pagination -->
+                    <div class="projects-slider-nav reveal">
+                        <button class="slider-arrow-btn prev-btn" onclick="slideProjects(-1)"
+                            aria-label="Previous Project">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                        <div class="slider-dots" id="sliderDots">
+                            <!-- Populated by JS -->
+                        </div>
+                        <button class="slider-arrow-btn next-btn" onclick="slideProjects(1)" aria-label="Next Project">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                        <div class="slider-counter" id="sliderCounter">01 / 08</div>
+                    </div>
+
+                    <!-- Additional Creative Collections Bar -->
+                    <div class="projects-extra-bar reveal">
+                        <span class="extra-label">Also Explore:</span>
+                        <a href="https://www.figma.com/design/wrdexbdwb1vKDdZOljData/Portfolio?node-id=718-170&t=Yfenwdsx7ubfECSt-1"
+                            target="_blank" class="extra-pill">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                            </svg>
+                            <span>Figma UI/UX Explorations</span>
+                        </a>
+                        <button class="extra-pill" onclick="openGallery(vol1Images, vol1Alts); return false;">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                <line x1="3" y1="9" x2="21" y2="9" />
-                                <line x1="9" y1="21" x2="9" y2="9" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <polyline points="21 15 16 10 5 21" />
                             </svg>
-                        </div>
-                    </div>
-                    <div class="expertise-content">
-                        <h3>UI/UX Design</h3>
-                        <p>Crafting interfaces that balance aesthetic appeal with functional clarity. 3 years of
-                            building
-                            design systems and seamless flows with Figma, Adobe XD, and Photoshop.</p>
-                    </div>
-                </div>
-
-                <div class="expertise-card reveal">
-                    <div class="expertise-card-header">
-                        <span class="expertise-number">02</span>
-                        <div class="expertise-indicator">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            <span>Social Media Graphics Vol. 1</span>
+                        </button>
+                        <button class="extra-pill" onclick="openGallery(vol2Images, vol2Alts); return false;">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <polyline points="21 15 16 10 5 21" />
                             </svg>
-                        </div>
+                            <span>Fashion Flyers Vol. 2</span>
+                        </button>
                     </div>
-                    <div class="expertise-visual-wrap">
-                        <div class="expertise-abstract dev-abstract">
-                            <div class="abs-window">
-                                <div class="abs-win-header">
-                                    <span></span><span></span><span></span>
+
+                </div>
+            </section>
+
+            <!-- Services Section (Exact Reference Layout) -->
+            <section class="services-section section-dark" id="services">
+                <div class="container">
+                    <!-- Section Header Matching Reference -->
+                    <div class="services-header reveal">
+                        <div class="services-spark-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60A5FA"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span>Core Services</span>
+                        </div>
+                        <h2 class="services-main-headline">
+                            Design Solutions Built<br>For Growth
+                        </h2>
+                    </div>
+
+                    <!-- Bento Frame Container -->
+                    <div class="services-frame-container reveal">
+                        <div class="services-bento-grid">
+
+                            <!-- Column 1: Stacked Blue Cards -->
+                            <div class="services-col">
+                                <!-- Card 1: Brand Identity -->
+                                <div class="service-card service-card-blue">
+                                    <div class="service-card-text">
+                                        <h3 class="service-title">Brand Identity</h3>
+                                        <p class="service-desc">
+                                            Building memorable visual identities that give brands a distinct voice and
+                                            personality.
+                                        </p>
+                                    </div>
+                                    <!-- Real Code Floating Pills for Brand Identity -->
+                                    <div class="brand-pills-canvas">
+                                        <span class="brand-pill pill-taxes">Art Direction</span>
+                                        <span class="brand-pill pill-marketing">Logo Design</span>
+                                        <span class="brand-pill pill-income">Visual Identity</span>
+                                        <span class="brand-pill pill-utility">Typography</span>
+                                        <span class="brand-pill pill-rent">Brand Strategy</span>
+                                        <span class="brand-pill pill-software">Brand Guidelines</span>
+                                    </div>
                                 </div>
-                                <div class="abs-win-body">
-                                    <div class="abs-code w-70"></div>
-                                    <div class="abs-code w-40 indent"></div>
-                                    <div class="abs-code w-50 indent"></div>
+
+                                <!-- Card 3: Web Design -->
+                                <div class="service-card service-card-blue">
+                                    <div class="service-card-text">
+                                        <h3 class="service-title">Web Design</h3>
+                                        <p class="service-desc">
+                                            Designing modern, responsive websites that turn visitors into customers.
+                                        </p>
+                                    </div>
+                                    <div class="service-visual-box web-visual">
+                                        <img src="img/services-web.jpg" alt="Multi-screen responsive web experiences">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2: Stacked White Cards -->
+                            <div class="services-col">
+                                <!-- Card 2: Product Design -->
+                                <div class="service-card service-card-white">
+                                    <div class="service-card-text">
+                                        <h3 class="service-title">Product Design</h3>
+                                        <p class="service-desc">
+                                            Turning complex ideas into intuitive digital experiences that people love
+                                            to use.
+                                        </p>
+                                    </div>
+                                    <div class="service-visual-box uiux-visual">
+                                        <img src="img/services-uiux.jpg" alt="iPhone 15 Pro mockups on 3D pedestals">
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Design Systems -->
+                                <div class="service-card service-card-white">
+                                    <div class="service-card-text">
+                                        <h3 class="service-title">Design Systems</h3>
+                                        <p class="service-desc">
+                                            Creating consistent, scalable design systems that make digital products
+                                            easier to build and maintain.
+                                        </p>
+                                    </div>
+                                    <!-- Real Code Concentric Arches & Exact Tool Icons -->
+                                    <div class="dev-orbit-canvas">
+                                        <svg viewBox="0 0 320 165" width="100%" height="100%"
+                                            preserveAspectRatio="xMidYMax meet">
+                                            <defs>
+                                                <filter id="domeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                                    <feGaussianBlur stdDeviation="10" result="blur" />
+                                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                                </filter>
+                                                <filter id="iconShadow" x="-40%" y="-40%" width="180%" height="180%">
+                                                    <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#0F172A"
+                                                        flood-opacity="0.14" />
+                                                    <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0F172A"
+                                                        flood-opacity="0.08" />
+                                                </filter>
+                                                <linearGradient id="blueDomeGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+                                                    <stop offset="0%" stop-color="#3B82F6" />
+                                                    <stop offset="45%" stop-color="#2563EB" />
+                                                    <stop offset="100%" stop-color="#1D4ED8" />
+                                                </linearGradient>
+                                                <linearGradient id="canvaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#00C4CC" />
+                                                    <stop offset="100%" stop-color="#03828A" />
+                                                </linearGradient>
+                                            </defs>
+
+                                            <!-- Concentric Glowing Outer Arches -->
+                                            <circle cx="160" cy="240" r="205" fill="none" stroke="#E2E8F0"
+                                                stroke-width="1.2" opacity="0.6" />
+                                            <circle cx="160" cy="240" r="175" fill="none"
+                                                stroke="rgba(59, 130, 246, 0.18)" stroke-width="16" />
+                                            <circle cx="160" cy="240" r="140" fill="none"
+                                                stroke="rgba(59, 130, 246, 0.35)" stroke-width="18" />
+
+                                            <!-- Main Solid Gradient Blue Dome -->
+                                            <circle cx="160" cy="240" r="115" fill="url(#blueDomeGrad)" />
+
+                                            <!-- Subtle Radial Highlight on Blue Dome -->
+                                            <ellipse cx="160" cy="145" rx="55" ry="18" fill="#93C5FD" opacity="0.45"
+                                                filter="url(#domeGlow)" />
+
+                                            <!-- Dashed Orbital Path Arching Through Icons -->
+                                            <path d="M 38 128 C 50 68, 120 34, 160 34 C 200 34, 270 68, 282 128"
+                                                fill="none" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="4 5"
+                                                stroke-linecap="round" />
+
+                                            <!-- Icon 1: VS Code (Far Left) -->
+                                            <g class="dev-orbit-node" transform="translate(42, 125)"
+                                                filter="url(#iconShadow)">
+                                                <title>VS Code</title>
+                                                <circle cx="0" cy="0" r="18" fill="#FFFFFF" stroke="#F1F5F9"
+                                                    stroke-width="1" />
+                                                <g transform="translate(-9, -9) scale(0.75)">
+                                                    <path
+                                                        d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"
+                                                        fill="#007ACC" />
+                                                </g>
+                                            </g>
+
+                                            <!-- Icon 2: Behance (Mid-Left) -->
+                                            <g class="dev-orbit-node" transform="translate(96, 68)"
+                                                filter="url(#iconShadow)">
+                                                <title>Behance</title>
+                                                <circle cx="0" cy="0" r="18" fill="#0057FF" stroke="#FFFFFF"
+                                                    stroke-width="1.5" />
+                                                <text x="0" y="5.5"
+                                                    font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+                                                    font-size="13.5" font-weight="800" fill="#FFFFFF"
+                                                    text-anchor="middle" letter-spacing="-0.02em">Bē</text>
+                                            </g>
+
+                                            <!-- Icon 3: Figma (Center Peak) -->
+                                            <g class="dev-orbit-node" transform="translate(160, 38)"
+                                                filter="url(#iconShadow)">
+                                                <title>Figma</title>
+                                                <circle cx="0" cy="0" r="20" fill="#0B132B" stroke="#1E293B"
+                                                    stroke-width="1.5" />
+                                                <g transform="translate(-18, -18.75) scale(1.5)">
+                                                    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"
+                                                        fill="#F24E1E" />
+                                                    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" fill="#FF7262" />
+                                                    <path d="M12 9h3.5a3.5 3.5 0 1 1 0 7H12V9z" fill="#1ABCFE" />
+                                                    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"
+                                                        fill="#A259FF" />
+                                                    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"
+                                                        fill="#0ACF83" />
+                                                </g>
+                                            </g>
+
+                                            <!-- Icon 4: Adobe Illustrator (Mid-Right) -->
+                                            <g class="dev-orbit-node" transform="translate(224, 68)"
+                                                filter="url(#iconShadow)">
+                                                <title>Adobe Illustrator</title>
+                                                <circle cx="0" cy="0" r="18" fill="#221402" stroke="#FF9A00"
+                                                    stroke-width="1.5" />
+                                                <text x="0" y="5"
+                                                    font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif"
+                                                    font-size="13" font-weight="800" fill="#FF9A00"
+                                                    text-anchor="middle">Ai</text>
+                                            </g>
+
+                                            <!-- Icon 5: Canva (Far Right) -->
+                                            <g class="dev-orbit-node" transform="translate(278, 125)"
+                                                filter="url(#iconShadow)">
+                                                <title>Canva</title>
+                                                <circle cx="0" cy="0" r="18" fill="url(#canvaGrad)" stroke="#FFFFFF"
+                                                    stroke-width="1.5" />
+                                                <!-- Real Canva "C" logo shape -->
+                                                <g transform="translate(-11, -11) scale(0.92)">
+                                                    <path
+                                                        d="M12 1.2C6.1 1.2 1.2 6.1 1.2 12c0 5.9 4.9 10.8 10.8 10.8 2.6 0 5-.9 6.8-2.4l-2.5-2.5c-1.1.9-2.5 1.4-4.3 1.4-3.8 0-6.8-3-6.8-6.8S7.8 5.2 12 5.2c1.8 0 3.3.7 4.5 1.8l2.5-2.5C17 2.1 14.6 1.2 12 1.2z"
+                                                        fill="#FFFFFF" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 3: Tall Featured Right Card -->
+                            <div class="service-card-tall">
+                                <div class="tall-hands-visual">
+                                    <img src="img/services-hands.png" srcset="img/services-hands.png 2x"
+                                        alt="Reaching hands connecting design and strategy" width="810" height="1203">
+                                </div>
+                                <div class="tall-card-content">
+                                    <div class="tall-trust-badge">Thoughtful Design. Real Impact.</div>
+                                    <h3 class="tall-title">Let's Build Something Meaningful.</h3>
+                                    <a href="https://wa.me/2349012949580?text=Hi%20David,%20I'd%20love%20to%20start%20a%20project%20with%20you"
+                                        target="_blank" class="btn-pill-dark">
+                                        <span>Start a Project</span>
+                                        <span class="btn-arrow-circle">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                <polyline points="7 7 17 7 17 17"></polyline>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Professional Journey / Career Path -->
+            <section class="journey-section section-dark" id="journey">
+                <div class="container">
+                    <div class="section-header left-aligned reveal">
+                        <div class="section-badge dark">Professional Journey</div>
+                        <h2 class="section-title">My Career Path</h2>
+                        <p class="section-subtitle">
+                            A timeline of my trajectory from design fundamentals to full-stack digital product builder.
+                        </p>
+                    </div>
+
+                    <div class="journey-timeline-grid">
+                        <!-- 2024 - Present -->
+                        <div class="journey-card current-role reveal">
+                            <div>
+                                <div class="journey-card-topbar">
+                                    <div class="journey-year-badge">2025 - 2026 – Present</div>
+                                    <div class="journey-status-pill">
+                                        <span class="live-dot"></span>
+                                        <span>Current Focus</span>
+                                    </div>
+                                </div>
+                                <h3 class="journey-card-role">Full-Stack Product Designer at GYDEN</h3>
+                                <p class="journey-card-company">Freelance &bull; Figma, Canva, Adobe Photoshop, Adobe
+                                    Illustrator</p>
+                            </div>
+                            <p class="journey-desc">
+                                Designing end-to-end product experiences for startups and client enterprises, taking
+                                applications from initial wireframes to live cloud deployment.
+                            </p>
+                        </div>
+
+                        <!-- 2023 - 2024 -->
+                        <div class="journey-card reveal">
+                            <div>
+                                <div class="journey-card-topbar">
+                                    <div class="journey-year-badge">2025 – 2026</div>
+                                </div>
+                                <h3 class="journey-card-role">Product Designer at HIMCLOTHIERS</h3>
+                                <p class="journey-card-company">Freelance &bull; Figma, Adobe XD, Canva, Design Systems
+                                </p>
+                            </div>
+                            <p class="journey-desc">
+                                Specializing in Design screens, Mobile screens, web screens, and clickable
+                                prototypes for web and mobile platforms.
+                            </p>
+                        </div>
+
+                        <!-- 2022 - 2023 -->
+                        <div class="journey-card reveal">
+                            <div>
+                                <div class="journey-card-topbar">
+                                    <div class="journey-year-badge">2026</div>
+                                </div>
+                                <h3 class="journey-card-role">Product Designer</h3>
+                                <p class="journey-card-company">Self-taught &bull; Visual &amp; Interaction Fundamentals
+                                </p>
+                            </div>
+                            <p class="journey-desc">
+                                Mastered visual hierarchy, grid systems, accessibility standards, color harmony, and
+                                typographic precision across digital media.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Client Feedback / Testimonials ("Trusted by Ambitious Teams Worldwide") -->
+            <section class="testimonials-section section-dark" id="feedback">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-badge dark">Client Feedback</div>
+                        <h2 class="section-title">Trusted By Ambitious Teams Worldwide</h2>
+                        <p class="section-subtitle">
+                            Hear directly from clients and founders who value quality, speed, and design precision.
+                        </p>
+                    </div>
+
+                    <!-- Featured Testimonial Showcase Card with Interactive Controls -->
+                    <div class="testimonial-showcase-card reveal">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote-badge">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                </svg>
+                            </div>
+
+                            <div class="testimonial-stars" id="tStars">★★★★★</div>
+
+                            <div class="testimonial-quote-text" id="tQuote">
+                                "Isah delivered an exceptional product that exceeded our expectations. His attention to
+                                detail and design sensibility is remarkable."
+                            </div>
+
+                            <div class="testimonial-author-box">
+                                <div class="testimonial-avatar-initials" id="tAvatar">IJ</div>
+                                <div>
+                                    <div class="testimonial-author-name" id="tName">Isah Jonathan</div>
+                                    <div class="testimonial-author-role" id="tRole">CEO, HIMCLOTHIERS</div>
+                                </div>
+                            </div>
+
+                            <!-- Next / Prev Controls -->
+                            <div class="testimonial-controls">
+                                <button class="testimonial-nav-btn" onclick="slideTestimonial(-1)"
+                                    aria-label="Previous Testimonial">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </button>
+                                <button class="testimonial-nav-btn" onclick="slideTestimonial(1)"
+                                    aria-label="Next Testimonial">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                                <span style="font-size:0.85rem;color:var(--text-white-muted);margin-left:8px;"
+                                    id="tCounter">1 / 4</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Side Visual / Project Mockup Preview -->
+                        <div class="testimonial-side-visual">
+                            <img src="img/Himcover.png" alt="Client project showcase" id="tVisual">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section ("Got Questions About Working Together?") -->
+            <section class="faq-section" id="faq">
+                <div class="container">
+                    <div class="faq-grid">
+                        <!-- Left: FAQ Introduction Card (Exact Reference Styling) -->
+                        <div class="faq-intro-card reveal">
+                            <div class="faq-card-glow"></div>
+                            <div class="faq-intro-content">
+                                <div class="faq-star-badge">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span>FAQ Questions</span>
+                                </div>
+                                <h3 class="faq-intro-heading">Got questions about<br>working together?</h3>
+                                <div class="faq-intro-action">
+                                    <a href="https://wa.me/2349012949580?text=Hi%20David,%20I'd%20love%20to%20get%20in%20touch%20about%20a%20project"
+                                        target="_blank" class="btn-pill-dark faq-btn-get-in-touch">
+                                        <span>Get In Touch</span>
+                                        <span class="btn-arrow-circle">
+                                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2.5">
+                                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                <polyline points="7 7 17 7 17 17"></polyline>
+                                            </svg>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="expertise-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6" />
-                                <polyline points="8 6 2 12 8 18" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="expertise-content">
-                        <h3>Web Development</h3>
-                        <p>Building high-performance web applications using React.js, TypeScript, and Tailwind CSS.
-                            Focused
-                            on clean, scalable code and seamless responsiveness.</p>
-                    </div>
-                </div>
 
-                <div class="expertise-card reveal">
-                    <div class="expertise-card-header">
-                        <span class="expertise-number">03</span>
-                        <div class="expertise-indicator">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="expertise-visual-wrap">
-                        <div class="expertise-abstract enterprise-abstract">
-                            <div class="abs-grid">
-                                <div class="abs-card wide"></div>
-                                <div class="abs-card"></div>
-                                <div class="abs-card"></div>
+                        <!-- Right: FAQ Accordion -->
+                        <div class="faq-accordion-list reveal">
+                            <!-- Item 1 (Open by default) -->
+                            <div class="faq-card-item active" onclick="toggleFaq(this)">
+                                <div class="faq-question-row">
+                                    <h4 class="faq-q-text">How long does a typical project take?</h4>
+                                    <span class="faq-toggle-btn">&minus;</span>
+                                </div>
+                                <div class="faq-answer-row">
+                                    <p>Most projects take between two to six weeks depending on scope, research depth,
+                                        and revision rounds. Clear timelines are shared before we begin.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="faq-card-item" onclick="toggleFaq(this)">
+                                <div class="faq-question-row">
+                                    <h4 class="faq-q-text">What does your design process look like?</h4>
+                                    <span class="faq-toggle-btn">&#43;</span>
+                                </div>
+                                <div class="faq-answer-row">
+                                    <p>I start by understanding your goals and users, then move through research,
+                                        wireframing, visual design, prototyping, and refinement to deliver a thoughtful
+                                        final experience.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="faq-card-item" onclick="toggleFaq(this)">
+                                <div class="faq-question-row">
+                                    <h4 class="faq-q-text">Do you offer revisions?</h4>
+                                    <span class="faq-toggle-btn">&#43;</span>
+                                </div>
+                                <div class="faq-answer-row">
+                                    <p>Yes. Feedback is an important part of the process. I work collaboratively with
+                                        clients to refine the design and ensure the final result aligns with the project
+                                        goals.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="faq-card-item" onclick="toggleFaq(this)">
+                                <div class="faq-question-row">
+                                    <h4 class="faq-q-text">Do you provide post-launch support?</h4>
+                                    <span class="faq-toggle-btn">&#43;</span>
+                                </div>
+                                <div class="faq-answer-row">
+                                    <p>Yes. I can provide design support, improvements, and guidance after delivery to
+                                        help your product continue evolving.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="expertise-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7" />
-                                <rect x="14" y="3" width="7" height="7" />
-                                <rect x="14" y="14" width="7" height="7" />
-                                <rect x="3" y="14" width="7" height="7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="expertise-content">
-                        <h3>Enterprise Products</h3>
-                        <p>Designing and developing complex, multi-portal ecosystems with modern backend tools like
-                            Supabase
-                            for real-time data and robust architecture.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Portfolio -->
-    <section class="portfolio" id="work">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-badge">Selected Work</div>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A showcase of premium digital products I've designed and engineered.</p>
-            </div>
-            <!-- Figma Design Projects Subsection -->
-            <div class="portfolio-subsection reveal">
-                <div class="subsection-header">
-                    <div class="subsection-line"></div>
-                    <div class="subsection-label figma-label">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                            <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
-                            <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
-                            <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
-                            <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
-                        </svg>
-                        Figma Design Projects
+            <!-- Certifications / Continuous Learning ("Where Strategy Meets Creativity") -->
+            <section class="certs-section" id="certifications">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <div class="section-badge">Continuous Learning</div>
+                        <h2 class="section-title">Where Strategy Meets Creativity</h2>
+                        <p class="section-subtitle">
+                            Professional qualifications and verified credentials completed to deliver industry-standard
+                            design and development.
+                        </p>
                     </div>
-                    <div class="subsection-line"></div>
-                </div>
-                <div class="portfolio-grid figma-grid">
 
-                    <!-- Carelyra -->
-                    <div class="portfolio-card figma-card reveal">
-                        <div class="figma-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                            </svg>
-                            Figma
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Carelyracoverpage.png" alt="Carelyra Health Care Accessibility App"
-                                class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">UI/UX &bull; Case Study</div>
-                            <h3>Carelyra — Health Care Accessibility App</h3>
-                            <p>A comprehensive case study on designing an accessible healthcare app, focusing on
-                                user-centric flows, inclusive interfaces, and empathetic design systems.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag figma-tag">UI/UX Design</span>
-                                <span class="ptag figma-tag">Case Study</span>
-                                <span class="ptag figma-tag">Healthcare</span>
+                    <div class="certs-grid">
+                        <!-- Cert 1: Dev and Design -->
+                        <div class="cert-editorial-card reveal">
+                            <div class="cert-thumb-wrap">
+                                <img src="img/Dev and design certifcate On UIUX Design.jpeg"
+                                    alt="UI/UX Design Certificate Dev and Design">
                             </div>
-                            <a href="https://www.behance.net/gallery/252932009/Carelyra-Health-care-App" target="_blank"
-                                class="portfolio-link">View Case Study
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
+                            <div class="cert-card-body">
+                                <div>
+                                    <div class="cert-meta-row">
+                                        <span class="cert-issuer-badge">Dev and Design</span>
+                                        <span class="cert-year-text">2025</span>
+                                    </div>
+                                    <h4 class="cert-name">UI/UX Design Certificate</h4>
+                                    <p style="font-size:0.9rem;color:var(--text-body);">
+                                        Comprehensive curriculum covering interaction models, user research,
+                                        wireframing, and design systems.
+                                    </p>
+                                </div>
+                                <button class="cert-view-btn"
+                                    onclick="openGallery(cert1Images, cert1Alts); return false;">
+                                    <span>View Certificate</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2: Techyjaunt -->
+                        <div class="cert-editorial-card reveal">
+                            <div class="cert-thumb-wrap">
+                                <img src="img/Techyjaunt Certificate on Brand Design.jpeg"
+                                    alt="Brand Design Certificate Techyjaunt">
+                            </div>
+                            <div class="cert-card-body">
+                                <div>
+                                    <div class="cert-meta-row">
+                                        <span class="cert-issuer-badge">Techyjaunt</span>
+                                        <span class="cert-year-text">2026</span>
+                                    </div>
+                                    <h4 class="cert-name">Brand Design Certificate</h4>
+                                    <p style="font-size:0.9rem;color:var(--text-body);">
+                                        Brand identity architecture, logo anatomy, color psychology, and brand book
+                                        specifications.
+                                    </p>
+                                </div>
+                                <button class="cert-view-btn"
+                                    onclick="openGallery(cert2Images, cert2Alts); return false;">
+                                    <span>View Certificate</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3: Gyden -->
+                        <div class="cert-editorial-card reveal">
+                            <div class="cert-thumb-wrap">
+                                <img src="img/Internship Gyden Certificate.jpg" alt="UI/UX Design Internship Gyden">
+                            </div>
+                            <div class="cert-card-body">
+                                <div>
+                                    <div class="cert-meta-row">
+                                        <span class="cert-issuer-badge">Gyden</span>
+                                        <span class="cert-year-text">2026</span>
+                                    </div>
+                                    <h4 class="cert-name">UI/UX Design Internship</h4>
+                                    <p style="font-size:0.9rem;color:var(--text-body);">
+                                        Hands-on product design internship crafting real-world user flows and
+                                        collaborative sprint deliverables.
+                                    </p>
+                                </div>
+                                <button class="cert-view-btn"
+                                    onclick="openGallery(cert3Images, cert3Alts); return false;">
+                                    <span>View Certificate</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section (Exact Reference Specification: Royal Blue Gradient, Navigation Cards & Clean Bottom Bar) -->
+            <footer class="site-footer" id="contact">
+                <div class="footer-container">
+                    <div class="footer-main-card reveal">
+                        <div class="footer-edge-glow"></div>
+
+                        <!-- Top Heading & Book a Call Button -->
+                        <div class="footer-top-row">
+                            <h2 class="footer-heading">
+                                Ready To Start<br>Something Great?
+                            </h2>
+
+                            <div class="footer-cta-action">
+                                <a href="https://wa.me/2349012949580?text=Hi%20David,%20I'd%20like%20to%20book%20a%20call%20to%20discuss%20a%20project"
+                                    target="_blank" class="footer-book-pill">
+                                    <span>Book a Call</span>
+                                </a>
+                                <a href="https://wa.me/2349012949580?text=Hi%20David,%20I'd%20like%20to%20book%20a%20call%20to%20discuss%20a%20project"
+                                    target="_blank" class="footer-arrow-btn" aria-label="Book a call arrow">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 4 Navigation Cards in 1 Horizontal Row -->
+                        <div class="footer-nav-grid">
+                            <!-- Card 1: Home (White background, black icon & text) -->
+                            <a href="#hero" class="footer-nav-card card-white">
+                                <div class="nav-card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                                    </svg>
+                                </div>
+                                <span class="nav-card-label">Home</span>
+                            </a>
+
+                            <!-- Card 2: Services (Transparent blue background, white icon & text) -->
+                            <a href="#services" class="footer-nav-card card-glass">
+                                <div class="nav-card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                    </svg>
+                                </div>
+                                <span class="nav-card-label">Services</span>
+                            </a>
+
+                            <!-- Card 3: Portfolio (Transparent blue background, white icon & text) -->
+                            <a href="#work" class="footer-nav-card card-glass">
+                                <div class="nav-card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z" />
+                                    </svg>
+                                </div>
+                                <span class="nav-card-label">Portfolio</span>
+                            </a>
+
+                            <!-- Card 4: Blog (Transparent blue background, white icon & text) -->
+                            <a href="#journey" class="footer-nav-card card-glass">
+                                <div class="nav-card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                                    </svg>
+                                </div>
+                                <span class="nav-card-label">Blog</span>
                             </a>
                         </div>
-                    </div>
 
-                    <!-- HR Management Dashboard -->
-                    <div class="portfolio-card figma-card reveal">
-                        <div class="figma-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                            </svg>
-                            Figma
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/hrscreen.png" alt="HR Management Dashboard" class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">UI/UX &bull; Dashboard Design</div>
-                            <h3>HR Management Dashboard</h3>
-                            <p>A complete redesign of workforce management — turning HR chaos into clarity through
-                                thoughtful information architecture, clean data visualisation, and intuitive flows.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag figma-tag">Dashboard</span>
-                                <span class="ptag figma-tag">SaaS UI</span>
-                                <span class="ptag figma-tag">Data Viz</span>
+                        <!-- Thin Divider -->
+                        <div class="footer-divider"></div>
+
+                        <!-- Bottom Footer: 3 Horizontally Aligned Areas -->
+                        <div class="footer-bottom-row">
+                            <div class="footer-copyright">
+                                Designed &amp; Developed By Isah David
                             </div>
-                            <a href="https://www.figma.com/design/gAqtvSQG93IkDXNG7FBTTJ/workharbour?node-id=0-1&t=7SAhv3hMams7oC4U-1"
-                                target="_blank" class="portfolio-link">View in Figma
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
 
-                    <!-- Figma Design Projects -->
-                    <div class="portfolio-card figma-card reveal">
-                        <div class="figma-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
-                            </svg>
-                            Figma
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Figma projects.png" alt="Figma Design Projects" class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">UI/UX &bull; Design Collection</div>
-                            <h3>Figma Design Projects</h3>
-                            <p>A curated collection of UI/UX design concepts, interface explorations, and interactive
-                                prototypes — each crafted with precision and a strong visual design language.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag figma-tag">Prototyping</span>
-                                <span class="ptag figma-tag">UI Design</span>
-                                <span class="ptag figma-tag">Components</span>
+                            <div class="footer-socials-group">
+                                <!-- Facebook -->
+                                <a href="https://facebook.com" target="_blank" class="footer-social-btn"
+                                    aria-label="Facebook">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.6 5H18V0h-3.808C10.595 0 9 1.583 9 4.615V8z" />
+                                    </svg>
+                                </a>
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/isah-david" target="_blank"
+                                    class="footer-social-btn" aria-label="LinkedIn">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                    </svg>
+                                </a>
+                                <!-- X -->
+                                <a href="https://x.com/IsahOlea" target="_blank" class="footer-social-btn"
+                                    aria-label="X">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/isahdavid6" target="_blank" class="footer-social-btn"
+                                    aria-label="Instagram">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
                             </div>
-                            <a href="https://www.figma.com/design/wrdexbdwb1vKDdZOljData/Portfolio?node-id=718-170&t=Yfenwdsx7ubfECSt-1"
-                                target="_blank" class="portfolio-link">View in Figma
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-
-            <!-- Brand Design Subsection -->
-            <div class="portfolio-subsection reveal">
-                <div class="subsection-header">
-                    <div class="subsection-line"></div>
-                    <div class="subsection-label brand-label">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            <path d="M2 17l10 5 10-5" />
-                            <path d="M2 12l10 5 10-5" />
-                        </svg>
-                        Brand Design
-                    </div>
-                    <div class="subsection-line"></div>
-                </div>
-                <div class="portfolio-grid brand-grid">
-
-                    <!-- Himclothiers Brand Guideline -->
-                    <div class="portfolio-card brand-card reveal">
-                        <div class="brand-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            </svg>
-                            Brand Identity
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Himclotheirs cover page.png" alt="Himclothiers Brand Guideline"
-                                class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Brand Identity &bull; Guidelines</div>
-                            <h3>Himclothiers Brand Guideline</h3>
-                            <p>A complete brand identity system and style guide establishing visual consistency, logo
-                                usage, colour palettes, and typography for a premium menswear label.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag brand-tag">Logo Design</span>
-                                <span class="ptag brand-tag">Typography</span>
-                                <span class="ptag brand-tag">Style Guide</span>
+                            <div class="footer-legal-links">
+                                <a href="#">Style Guide</a>
+                                <a href="#">Changelog</a>
+                                <a href="#">Licenses</a>
                             </div>
-                            <a href="img/Himclothiers Brand Guideline.pdf" target="_blank" class="portfolio-link">View
-                                Brand Guide
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
                         </div>
                     </div>
+                </div>
+            </footer>
 
-                    <!-- Safe Nest -->
-                    <div class="portfolio-card brand-card reveal">
-                        <div class="brand-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            </svg>
-                            Brand Identity
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Safenestt.png" alt="Safe Nest Brand Design" class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Brand Identity &bull; Visual Design</div>
-                            <h3>Safe Nest</h3>
-                            <p>A comprehensive brand identity for Safe Nest — a real estate & home safety brand — built
-                                around trust, warmth, and modern visual communication.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag brand-tag">Logo Design</span>
-                                <span class="ptag brand-tag">Color System</span>
-                                <span class="ptag brand-tag">Real Estate</span>
-                            </div>
-                            <a href="img/Safe nest.pdf" target="_blank" class="portfolio-link">View Brand Book
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Harvest Safe -->
-                    <div class="portfolio-card brand-card reveal">
-                        <div class="brand-badge">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            </svg>
-                            Brand Identity
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Cover page.png" alt="Harvest Safe Brand Design" class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Brand Identity &bull; Visual Design</div>
-                            <h3>Harvest Safe</h3>
-                            <p>A strategic brand identity built around agricultural safety and sustainability —
-                                balancing earthy tones with clean, modern design principles for a trusted brand
-                                presence.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag brand-tag">Logo Design</span>
-                                <span class="ptag brand-tag">Brand Strategy</span>
-                                <span class="ptag brand-tag">Agriculture</span>
-                            </div>
-                            <a href="img/Harvest safe.pdf" target="_blank" class="portfolio-link">View Brand Book
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Social Media Design Subsection -->
-            <div class="portfolio-subsection reveal">
-                <div class="subsection-header">
-                    <div class="subsection-line"></div>
-                    <div class="subsection-label social-label">
-                        Social Media Design
-                    </div>
-                    <div class="subsection-line"></div>
-                </div>
-                <div class="portfolio-grid social-grid">
-
-                    <!-- Social Media Card 1 — replace src with your image -->
-                    <div class="portfolio-card social-card reveal">
-                        <div class="social-badge">
-                            Social
-                        </div>
-                        <div class="portfolio-thumb-wrap social-stack-wrap">
-                            <img src="img/Social media designs/1.png" alt="Social media graphic 1" loading="lazy">
-                            <img src="img/Social media designs/2.png" alt="Social media graphic 2" loading="lazy">
-                            <img src="img/Social media designs/3.png" alt="Social media graphic 3" loading="lazy">
-                            <img src="img/Social media designs/4.png" alt="Social media graphic 4" loading="lazy">
-                            <img src="img/Social media designs/PNG 6.png" alt="Social media graphic 5" loading="lazy">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Social Media &bull; Graphics</div>
-                            <h3>Social Media Graphics — Vol. 1</h3>
-                            <p>A collection of engaging social media designs created to capture attention, communicate
-                                ideas clearly, and help brands build a strong and consistent visual presence online.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag social-tag">Twitter / X</span>
-                                <span class="ptag social-tag">Flyers</span>
-                                <span class="ptag social-tag">Branding</span>
-                                <span class="ptag social-tag">Instagram</span>
-                                <span class="ptag social-tag">Facebook</span>
-                                <span class="ptag social-tag">Tiktok</span>
-                            </div>
-                            <a href="#" class="portfolio-link"
-                                onclick="openGallery(vol1Images, vol1Alts); return false;">View
-                                Project
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Social Media Card 2 — replace src with your image -->
-                    <div class="portfolio-card social-card reveal">
-                        <div class="social-badge">
-                            Social
-                        </div>
-                        <div class="portfolio-thumb-wrap social-stack-wrap">
-                            <img src="img/Social media designs/Social media vol 2/WhatsApp Image 2026-09-24 at 09.24.40.jpeg"
-                                alt="Social media graphic 6" loading="lazy">
-                            <img src="img/Social media designs/Social media vol 2/WhatsApp Image 2026-09-24 at 09.24.41.jpeg"
-                                alt="Social media graphic 7" loading="lazy">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Social Media &bull; Graphics</div>
-                            <h3>Social Media Graphics — Vol. 2</h3>
-                            <p>A fashion-focused flyer designed to showcase clothing products, communicate promotions
-                                clearly, and create a bold visual presentation that attracts potential customers.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag social-tag">Twitter / X</span>
-                                <span class="ptag social-tag">Flyers</span>
-                                <span class="ptag social-tag">Branding</span>
-                                <span class="ptag social-tag">Instagram</span>
-                                <span class="ptag social-tag">Facebook</span>
-                                <span class="ptag social-tag">Tiktok</span>
-                            </div>
-                            <a href="#" class="portfolio-link"
-                                onclick="openGallery(vol2Images, vol2Alts); return false;">View
-                                Project
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Website Projects Subsection -->
-            <div class="portfolio-subsection reveal">
-                <div class="subsection-header">
-                    <div class="subsection-line"></div>
-                    <div class="subsection-label">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <line x1="2" y1="12" x2="22" y2="12" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                        Website Projects
-                    </div>
-                    <div class="subsection-line"></div>
-                </div>
-                <div class="portfolio-grid website-grid">
-                    <!-- HimClothiers Website -->
-                    <div class="portfolio-card website-card reveal">
-                        <div class="website-badge">
-                            <span class="live-dot"></span> Live Website
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Himcover.png" alt="HimClothiers E-Commerce Website" class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">E-Commerce &bull; Full-Stack</div>
-                            <h3>HimClothiers — Premium Menswear</h3>
-                            <p>A luxury fashion e-commerce experience designed and built for the modern Nigerian man,
-                                featuring seamless shopping flows, product management, and a sleek premium aesthetic.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="ptag">React</span>
-                                <span class="ptag">Supabase</span>
-                                <span class="ptag">E-Commerce</span>
-                            </div>
-                            <a href="https://him-clothiers-new.vercel.app/" target="_blank" class="portfolio-link">Visit
-                                Website
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ErrandHub Website -->
-                    <div class="portfolio-card website-card reveal">
-                        <div class="website-badge">
-                            <span class="live-dot"></span> Live Website
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Errandhubcover.png" alt="ErrandHub Multi-Portal Website"
-                                class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">SaaS &bull; Full-Stack</div>
-                            <h3>ErrandHub — Multi-Portal Ecosystem</h3>
-                            <p>A comprehensive task management platform with distinct portals for Users, Runners, and
-                                Administrators — built with real-time capabilities and a scalable backend architecture.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="ptag">React</span>
-                                <span class="ptag">Supabase</span>
-                                <span class="ptag">Multi-Portal</span>
-                            </div>
-                            <a href="https://errandhub.vercel.app" target="_blank" class="portfolio-link">Visit Website
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Balisrelis Website -->
-                    <div class="portfolio-card website-card reveal">
-                        <div class="website-badge">
-                            <span class="live-dot"></span> Live Website
-                        </div>
-                        <div class="portfolio-thumb-wrap">
-                            <img src="img/Belisrelis logo with text.png" alt="Balisrelis Property Limited Website"
-                                class="portfolio-thumb">
-                        </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-category">Real Estate &bull; Website</div>
-                            <h3>Balisrelis Property Limited</h3>
-                            <p>A professional website designed and developed for a real estate agency, featuring property listings and seamless client communication.</p>
-                            <div class="portfolio-tags">
-                                <span class="ptag">Web Design</span>
-                                <span class="ptag">Real Estate</span>
-                            </div>
-                            <a href="https://balisrelis.com" target="_blank" class="portfolio-link">Visit Website
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Journey -->
-    <section class="journey" id="journey">
-        <div class="container">
-            <div class="section-header reveal" style="text-align:left;margin-bottom:48px;">
-                <div class="section-badge">Professional Journey</div>
-                <h2 class="section-title">My Career Path</h2>
-                <p class="section-subtitle">A timeline of my growth from designer to full-stack product builder.</p>
-            </div>
-            <div class="journey-grid">
-                <div class="journey-list">
-                    <div class="journey-item reveal">
-                        <div class="journey-dot"></div>
-                        <div>
-                            <div class="journey-year">2024 – Present</div>
-                            <div class="journey-role">Full-Stack Product Designer</div>
-                            <div class="journey-company">Freelance — React, TypeScript, Supabase</div>
-                        </div>
-                    </div>
-                    <div class="journey-item reveal">
-                        <div class="journey-dot"></div>
-                        <div>
-                            <div class="journey-year">2023 – 2024</div>
-                            <div class="journey-role">UI/UX Product Designer</div>
-                            <div class="journey-company">Freelance — Figma, Adobe XD</div>
-                        </div>
-                    </div>
-                    <div class="journey-item reveal">
-                        <div class="journey-dot"></div>
-                        <div>
-                            <div class="journey-year">2022 – 2023</div>
-                            <div class="journey-role">Junior UI Designer</div>
-                            <div class="journey-company">Self-taught — Design Fundamentals</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="certifications" id="certifications">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-badge">Continuous Learning</div>
-                <h2 class="section-title">Certifications</h2>
-                <p class="section-subtitle">Professional qualifications and courses I've completed to stay at the
-                    forefront of design and development.</p>
-            </div>
-            <div class="certifications-grid">
-                <!-- Cert 1 -->
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-content">
-                        <div class="cert-year">2025</div>
-                        <h3 class="cert-title">UI/UX Design Certificate</h3>
-                        <div class="cert-issuer">Dev and Design</div>
-                        <a href="#" class="cert-btn"
-                            onclick="openGallery(cert1Images, cert1Alts); return false;">
-                            View Certificate
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Cert 2 -->
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-content">
-                        <div class="cert-year">2026</div>
-                        <h3 class="cert-title">Brand Design Certificate</h3>
-                        <div class="cert-issuer">Techyjaunt</div>
-                        <a href="#" class="cert-btn"
-                            onclick="openGallery(cert2Images, cert2Alts); return false;">
-                            View Certificate
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <!-- Cert 3 -->
-                <div class="cert-card reveal">
-                    <div class="cert-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="cert-content">
-                        <div class="cert-year">2026</div>
-                        <h3 class="cert-title">UI/UX Design Internship</h3>
-                        <div class="cert-issuer">Gyden</div>
-                        <a href="#" class="cert-btn"
-                            onclick="openGallery(cert3Images, cert3Alts); return false;">
-                            View Certificate
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Feedback -->
-    <section class="testimonials" id="feedback">
-        <div class="container">
-            <div class="section-header reveal">
-                <div class="section-badge">Client Feedback</div>
-                <h2 class="section-title">What People Say</h2>
-                <p class="section-subtitle">Trusted by clients who value quality, speed, and premium design.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Isah delivered an exceptional product that exceeded our expectations.
-                        His attention to detail and design sensibility is remarkable."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">IJ</div>
-                        <div>
-                            <div class="testimonial-name">Isah Jonathan</div>
-                            <div class="testimonial-role">CEO, HIMCLOTHIERS</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Working with Isah was a game-changer. He turned our complex
-                        requirements into a clean, intuitive interface that our users love."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RA</div>
-                        <div>
-                            <div class="testimonial-name">Mr Richmond Asare</div>
-                            <div class="testimonial-role">CEO Gyden</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Exceptional quality and fast turnaround. Isah understands both design
-                        and development, making collaboration incredibly smooth."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RM</div>
-                        <div>
-                            <div class="testimonial-name">Royal Macaulay</div>
-                            <div class="testimonial-role">Developer</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"You really did a great work on my website. I really appreciate your creativity and professionalism. It exceeded my expectations. I love your work and I would highly recommend you to anyone. Thank you David."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AB</div>
-                        <div>
-                            <div class="testimonial-name">Adenike Benson</div>
-                            <div class="testimonial-role">CEO Balisrelis Property Limited</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA / Contact -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <div class="cta-grid">
-                <div class="reveal">
-                    <h2 class="cta-title">Let's build something <em>extraordinary</em></h2>
-                    <p class="cta-desc">Have a project in mind? I'm currently accepting new clients for Q2 2026. Whether
-                        you need a full product design, a design system, or just want to explore an idea — I'd love to
-                        hear about it.</p>
-                    <div class="cta-socials">
-                        <a href="https://wa.me/2349012949580?text=Hi%20I%20saw%20your%20portfolio" target="_blank"
-                            class="cta-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                            WhatsApp
-                        </a>
-                        <a href="https://www.behance.net/isaholea" target="_blank" class="cta-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M7.803 5.731c.589 0 1.119.051 1.605.155.483.103.895.273 1.243.508.343.235.611.547.803.939.187.387.28.871.28 1.443 0 .62-.14 1.137-.421 1.551-.283.415-.7.753-1.255 1.015.757.219 1.318.602 1.69 1.146.374.549.557 1.205.557 1.976 0 .625-.119 1.166-.358 1.622-.238.457-.561.832-.967 1.132-.406.295-.87.514-1.388.653-.52.141-1.051.21-1.595.21H2V5.731h5.803z" />
-                            </svg>
-                            Behance
-                        </a>
-                        <a href="https://x.com/IsahOlea" target="_blank" class="cta-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                            </svg>
-                            X (Twitter)
-                        </a>
-                        <a href="https://www.instagram.com/isahdavid6" target="_blank" class="cta-social-link">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg>
-                            Instagram
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form reveal" onsubmit="sendWhatsApp(event)">
-                    <div class="form-row">
-                        <div class="form-group"><label>First Name</label><input type="text" id="firstName"
-                                placeholder="John" required>
-                        </div>
-                        <div class="form-group"><label>Last Name</label><input type="text" id="lastName"
-                                placeholder="Doe" required>
-                        </div>
-                    </div>
-                    <div class="form-group"><label>Email Address</label><input type="email" id="email"
-                            placeholder="john@example.com" required></div>
-                    <div class="form-group"><label>Message</label><textarea id="message"
-                            placeholder="Tell me about your project..." required></textarea></div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-copy">© 2026 Isah David. All rights reserved.</div>
-                <div class="footer-links">
-                    <a href="https://wa.me/2349012949580" target="_blank">WhatsApp</a>
-                    <a href="https://www.behance.net/isaholea" target="_blank">Behance</a>
-                    <a href="https://x.com/IsahOlea" target="_blank">X (Twitter)</a>
-                    <a href="https://www.instagram.com/isahdavid6" target="_blank">Instagram</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <!-- Resume Modal -->
     <div class="resume-modal-overlay" id="resumeModal" onclick="handleOverlayClick(event)">
         <div class="resume-modal">
             <div class="resume-modal-header">
                 <div class="resume-modal-title">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                         <polyline points="14 2 14 8 20 8" />
                     </svg>
-                    Isah David — Resume
+                    <span>Isah David — Resume</span>
                 </div>
                 <div class="resume-modal-actions">
                     <a href="img/resume.pdf" download="Isah_David_Resume.pdf" class="resume-download">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="7 10 12 15 17 10" />
                             <line x1="12" y1="15" x2="12" y2="3" />
                         </svg>
-                        Download
+                        <span>Download</span>
                     </a>
                     <button class="resume-close" onclick="closeResume()" aria-label="Close">&times;</button>
                 </div>
@@ -943,14 +1315,34 @@
         </div>
     </div>
 
+    <!-- Gallery / Lightbox Modal -->
+    <div class="gallery-modal" id="galleryModal" onclick="if (event.target === this) closeGallery()">
+        <button class="gallery-close" onclick="closeGallery()" aria-label="Close gallery">&times;</button>
+        <button class="gallery-nav gallery-prev" onclick="showGalleryImage(-1)" aria-label="Previous image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+        </button>
+        <figure class="gallery-figure">
+            <img id="galleryImage" src="" alt="">
+        </figure>
+        <button class="gallery-nav gallery-next" onclick="showGalleryImage(1)" aria-label="Next image">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6" />
+            </svg>
+        </button>
+        <div class="gallery-count" id="galleryCount"></div>
+    </div>
+
+    <!-- Scripts -->
     <script>
-        // Mobile menu
+        // Mobile menu toggle
         function closeMobile() {
             document.getElementById('mobileMenu').classList.remove('open');
             document.getElementById('menuBtn').classList.remove('active');
         }
 
-        // Resume modal
+        // Resume Modal Handlers
         function openResume() {
             document.getElementById('resumeModal').classList.add('open');
             document.body.style.overflow = 'hidden';
@@ -962,26 +1354,32 @@
         function handleOverlayClick(e) {
             if (e.target === document.getElementById('resumeModal')) closeResume();
         }
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResume(); });
 
         // Typing animation
-        const words = ['Brand Designer', 'Product Designer', 'Web Developer', 'UI/UX Expert', 'Frontend Engineer'];
+        const words = ['Product Designer', 'Brand Designer', 'UI/UX Expert', 'Frontend Engineer'];
         let wordIndex = 0, charIndex = 0, isDeleting = false;
         const typingEl = document.getElementById('typingText');
 
         function type() {
+            if (!typingEl) return;
             const word = words[wordIndex];
             typingEl.textContent = isDeleting ? word.substring(0, charIndex - 1) : word.substring(0, charIndex + 1);
             isDeleting ? charIndex-- : charIndex++;
 
-            let timeout = isDeleting ? 50 : 70;
-            if (!isDeleting && charIndex === word.length) { timeout = 2000; isDeleting = true; }
-            else if (isDeleting && charIndex === 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; timeout = 500; }
+            let timeout = isDeleting ? 45 : 75;
+            if (!isDeleting && charIndex === word.length) {
+                timeout = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                timeout = 400;
+            }
             setTimeout(type, timeout);
         }
-        setTimeout(type, 500);
+        setTimeout(type, 400);
 
-        // Scroll reveal
+        // Scroll reveal with IntersectionObserver
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -989,11 +1387,11 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // WhatsApp Form Submission
+        // WhatsApp Form Submission Handler
         function sendWhatsApp(event) {
             event.preventDefault();
 
@@ -1008,36 +1406,172 @@
             }
 
             const phoneNumber = "2349012949580";
-            const fullMessage = `Hello, my name is ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`;
-
-            const encodedMessage = encodeURIComponent(fullMessage);
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            const fullMessage = `Hello David,\nMy name is ${firstName} ${lastName}\nEmail: ${email}\nProject Goal: ${message}`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
 
             window.open(whatsappUrl, '_blank');
         }
-    </script>
 
-    <!-- Gallery / Lightbox Modal -->
-    <div class="gallery-modal" id="galleryModal" onclick="if (event.target === this) closeGallery()">
-        <button class="gallery-close" onclick="closeGallery()" aria-label="Close gallery">&times;</button>
-        <button class="gallery-nav gallery-prev" onclick="showGalleryImage(-1)" aria-label="Previous image">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="15 18 9 12 15 6" />
-            </svg>
-        </button>
-        <figure class="gallery-figure">
-            <img id="galleryImage" src="" alt="">
-        </figure>
-        <button class="gallery-nav gallery-next" onclick="showGalleryImage(1)" aria-label="Next image">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="9 18 15 12 9 6" />
-            </svg>
-        </button>
-        <div class="gallery-count" id="galleryCount"></div>
-    </div>
+        // Category Filter for Projects
+        // ==========================================
+        // PROJECT SLIDER (Sliding Animation Left to Right)
+        // ==========================================
+        let currentProjectSlide = 0;
+        const projectSliderTrack = document.getElementById('projectSliderTrack');
+        const projectSlideCards = document.querySelectorAll('.project-slide-card');
+        const totalProjectSlides = projectSlideCards.length;
+        const sliderDotsContainer = document.getElementById('sliderDots');
+        const sliderCounter = document.getElementById('sliderCounter');
+        let autoSlideTimer = null;
+        let isSlidePaused = false;
 
-    <script>
-        // Social Media Gallery
+        function initProjectSlider() {
+            if (!projectSliderTrack || totalProjectSlides === 0) return;
+
+            // Generate Pagination Dots
+            if (sliderDotsContainer) {
+                sliderDotsContainer.innerHTML = '';
+                for (let i = 0; i < totalProjectSlides; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
+                    dot.setAttribute('aria-label', `View Project ${i + 1}`);
+                    dot.onclick = () => {
+                        goToProjectSlide(i);
+                        resetAutoSlide();
+                    };
+                    sliderDotsContainer.appendChild(dot);
+                }
+            }
+
+            updateProjectSlider();
+            startAutoSlide();
+
+            // Hover Pause
+            const container = document.getElementById('projectSliderContainer');
+            if (container) {
+                container.addEventListener('mouseenter', () => { isSlidePaused = true; });
+                container.addEventListener('mouseleave', () => { isSlidePaused = false; });
+
+                // Touch Swipe for mobile/tablet
+                let touchStartX = 0;
+                let touchEndX = 0;
+                container.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+                container.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchEndX - touchStartX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff < 0) {
+                            slideProjects(1); // Swipe left -> advance slide
+                        } else {
+                            slideProjects(-1); // Swipe right -> previous slide
+                        }
+                    }
+                }, { passive: true });
+            }
+        }
+
+        function slideProjects(dir) {
+            currentProjectSlide = (currentProjectSlide + dir + totalProjectSlides) % totalProjectSlides;
+            updateProjectSlider();
+            resetAutoSlide();
+        }
+
+        function goToProjectSlide(index) {
+            currentProjectSlide = index;
+            updateProjectSlider();
+            resetAutoSlide();
+        }
+
+        function updateProjectSlider() {
+            if (!projectSliderTrack) return;
+            projectSliderTrack.style.transform = `translateX(-${currentProjectSlide * 100}%)`;
+
+            // Update Dots
+            const dots = document.querySelectorAll('.slider-dot');
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentProjectSlide);
+            });
+
+            // Update 01 / 08 Counter
+            if (sliderCounter) {
+                const cur = String(currentProjectSlide + 1).padStart(2, '0');
+                const tot = String(totalProjectSlides).padStart(2, '0');
+                sliderCounter.textContent = `${cur} / ${tot}`;
+            }
+        }
+
+        function startAutoSlide() {
+            if (autoSlideTimer) clearInterval(autoSlideTimer);
+            autoSlideTimer = setInterval(() => {
+                if (!isSlidePaused) {
+                    currentProjectSlide = (currentProjectSlide + 1) % totalProjectSlides;
+                    updateProjectSlider();
+                }
+            }, 5000);
+        }
+
+        function resetAutoSlide() {
+            startAutoSlide();
+        }
+
+        // Initialize immediately and on DOMContentLoaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initProjectSlider);
+        } else {
+            initProjectSlider();
+        }
+
+        // Testimonial Slider
+        const testimonials = [
+            {
+                quote: "Isah delivered an exceptional product that exceeded our expectations. His attention to detail and design sensibility is remarkable.",
+                name: "Isah Jonathan",
+                role: "CEO, HIMCLOTHIERS",
+                avatar: "IJ",
+                visual: "img/Himcover.png"
+            },
+            {
+                quote: "Working with Isah was a game-changer. He turned our complex requirements into a clean, intuitive interface that our users love.",
+                name: "Mr Richmond Asare",
+                role: "CEO Gyden",
+                avatar: "RA",
+                visual: "img/Carelyracoverpage.png"
+            },
+            {
+                quote: "Exceptional quality and fast turnaround. Isah understands both design and development, making collaboration incredibly smooth.",
+                name: "Royal Macaulay",
+                role: "Software Developer",
+                avatar: "RM",
+                visual: "img/Errandhubcover.png"
+            },
+            {
+                quote: "You really did a great work on my website. I really appreciate your creativity and professionalism. It exceeded my expectations. I love your work and I would highly recommend you to anyone.",
+                name: "Adenike Benson",
+                role: "CEO Balisrelis Property Limited",
+                avatar: "AB",
+                visual: "img/Belisrelis logo with text.png"
+            }
+        ];
+
+        let currentTIndex = 0;
+        function renderTestimonial() {
+            const t = testimonials[currentTIndex];
+            document.getElementById('tQuote').textContent = `"${t.quote}"`;
+            document.getElementById('tName').textContent = t.name;
+            document.getElementById('tRole').textContent = t.role;
+            document.getElementById('tAvatar').textContent = t.avatar;
+            document.getElementById('tVisual').src = t.visual;
+            document.getElementById('tCounter').textContent = `${currentTIndex + 1} / ${testimonials.length}`;
+        }
+
+        function slideTestimonial(direction) {
+            currentTIndex = (currentTIndex + direction + testimonials.length) % testimonials.length;
+            renderTestimonial();
+        }
+
+        // Image Gallery Datasets
         const vol1Images = [
             'img/Social media designs/1.png',
             'img/Social media designs/2.png',
@@ -1045,44 +1579,33 @@
             'img/Social media designs/4.png',
             'img/Social media designs/PNG 6.png'
         ];
+        const vol1Alts = [
+            'Social media design graphic 1',
+            'Social media design graphic 2',
+            'Social media design graphic 3',
+            'Social media design graphic 4',
+            'Social media design graphic 5'
+        ];
+
         const vol2Images = [
             'img/Social media designs/Social media vol 2/WhatsApp Image 2026-09-24 at 09.24.40.jpeg',
             'img/Social media designs/Social media vol 2/WhatsApp Image 2026-09-24 at 09.24.41.jpeg'
         ];
-
-        const cert1Images = [
-            'img/Dev and design certifcate On UIUX Design.jpeg'
-        ];
-        const cert1Alts = [
-            'UI/UX Design certificate from Dev and Design, 2025'
-        ];
-
-        const cert2Images = [
-            'img/Techyjaunt Certificate on Brand Design.jpeg'
-        ];
-        const cert2Alts = [
-            'Brand Design certificate from Techyjaunt, 2026'
-        ];
-
-        const cert3Images = [
-            'img/Internship Gyden Certificate.jpg'
-        ];
-        const cert3Alts = [
-            'UI/UX Design Internship completion certificate from Gyden'
-        ];
-
-        const vol1Alts = [
-            'Brand design social media graphic 1',
-            'Brand design social media graphic 2',
-            'Brand design social media graphic 3',
-            'Brand design social media graphic 4',
-            'Brand design social media graphic 5'
-        ];
         const vol2Alts = [
-            'Brand design social media graphic 1',
-            'Brand design social media graphic 2'
+            'Fashion promotion flyer 1',
+            'Fashion promotion flyer 2'
         ];
 
+        const cert1Images = ['img/Dev and design certifcate On UIUX Design.jpeg'];
+        const cert1Alts = ['UI/UX Design certificate from Dev and Design, 2025'];
+
+        const cert2Images = ['img/Techyjaunt Certificate on Brand Design.jpeg'];
+        const cert2Alts = ['Brand Design certificate from Techyjaunt, 2026'];
+
+        const cert3Images = ['img/Internship Gyden Certificate.jpg'];
+        const cert3Alts = ['UI/UX Design Internship certificate from Gyden, 2026'];
+
+        // Gallery Modal Controls
         const galleryEl = document.getElementById('galleryModal');
         const galleryImg = document.getElementById('galleryImage');
         const galleryCount = document.getElementById('galleryCount');
@@ -1121,14 +1644,35 @@
             galleryCount.textContent = `${galleryIndex + 1} / ${galleryList.length}`;
         }
 
+        // FAQ Accordion Toggle
+        function toggleFaq(item) {
+            const isActive = item.classList.contains('active');
+            // Close all items
+            document.querySelectorAll('.faq-card-item').forEach(el => {
+                el.classList.remove('active');
+                const btn = el.querySelector('.faq-toggle-btn');
+                if (btn) btn.innerHTML = '&#43;';
+            });
+            // Open clicked item if it was closed
+            if (!isActive) {
+                item.classList.add('active');
+                const btn = item.querySelector('.faq-toggle-btn');
+                if (btn) btn.innerHTML = '&minus;';
+            }
+        }
+
+        // Global Keydown Handler (Escape, Left, Right)
         document.addEventListener('keydown', e => {
-            if (!galleryEl.classList.contains('open')) return;
-            if (e.key === 'Escape') closeGallery();
-            if (e.key === 'ArrowRight') showGalleryImage(1);
-            if (e.key === 'ArrowLeft') showGalleryImage(-1);
+            if (e.key === 'Escape') {
+                closeResume();
+                closeGallery();
+            }
+            if (galleryEl.classList.contains('open')) {
+                if (e.key === 'ArrowRight') showGalleryImage(1);
+                if (e.key === 'ArrowLeft') showGalleryImage(-1);
+            }
         });
     </script>
-
 </body>
 
 </html>
